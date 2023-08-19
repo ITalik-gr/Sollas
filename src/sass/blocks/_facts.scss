@@ -1,0 +1,33 @@
+.facts {
+  background: #EBEEF9;
+  padding: 78px 0;
+  &-title {
+    margin-bottom: 50px;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &-card {
+    border-radius: 24px;
+    background: #FFF;
+    padding: 32px 32px 30px 24px;
+    &__circle {
+      background-color: #FB7B54;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      margin-bottom: 64px;
+    }
+    &__descr {
+      max-width: 368px;
+      color: #111;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 135%;
+      letter-spacing: -0.11px;
+    }
+  }
+}
