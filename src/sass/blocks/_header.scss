@@ -199,9 +199,12 @@
       align-items: flex-end;
       .timeline-item {
         &__image {
+          &-circle {
+            margin-right: 0;
+          }
           &-line {
             &__left {
-              width: 237px;
+              width: 257px;
               background-color: #FFF;
             }
           }

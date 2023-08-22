@@ -1,0 +1,29 @@
+.contact-us {
+  background-color: #111;
+  padding: 50px 0 103px 0;
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-title {
+    color: #FFF;
+    text-align: center;
+    font-size: 52px;
+    line-height: 114%; /* 59.28px */
+    letter-spacing: -1.56px;
+    margin-bottom: 52px;
+    max-width: 959px;
+  }
+  &-btn {
+    border-radius: 62px;
+    background: #FFF;
+    color: #111;
+    font-size: 24px;
+    line-height: 30px; /* 125% */
+    letter-spacing: -0.24px;
+    width: 360px;
+    height: 79px;
+  }
+}
