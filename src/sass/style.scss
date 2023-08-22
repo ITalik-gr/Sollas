@@ -18,6 +18,10 @@ a {
         text-decoration: none;
     }
 }
+p {
+    margin: 0;
+    padding: 0;
+}
 
 .btn {
     width: 230px;
@@ -36,7 +40,6 @@ a {
     transition: .3s all;
     &:hover {
         color: #000;
-        opacity: .8;
     }
     &-2 {
         color: #FFF;
@@ -44,7 +47,6 @@ a {
         background: #242424;
         &:hover {
             color: #FFF;
-            opacity: .8;
         }
     }
 }
