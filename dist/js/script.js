@@ -39,7 +39,9 @@ var typed = new Typed('.typing', {
   strings: ['web', 'app', 'SaaS'],
   loop: true,
   typeSpeed: 100,
-  backSpeed: 100,
+  backSpeed: 150,
   backDelay: 1900,
   showCursor: false,
 });
+
+AOS.init();
