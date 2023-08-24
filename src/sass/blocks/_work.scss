@@ -21,6 +21,13 @@
     overflow: hidden;
     margin-bottom: 20px;
     margin-right: 10px;
+
+    border-radius: 24px;
+    &:hover {
+      .work-card__image {
+        transform: scale(1.1);
+      }
+    }
     &__1 {
       // ...
     }
@@ -34,6 +41,7 @@
       margin-right: 0;
     }
     &__image {
+      transition: .5s all;
       position: absolute;
       left: 0;
       top: 0;
