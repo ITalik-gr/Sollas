@@ -152,23 +152,23 @@
     &__2 {
       .timeline-item {
         &__title {
-          color: #6BE887;
+          color: #FB7B54;
         }
         &__subtitle {
-          color: rgba(107, 232, 134, 0.7);
+          color: #FB7B54;
         }
         &__image {
           &-circle {
-            background-color: #6BE887;
+            background-color: #FB7B54;
             filter: drop-shadow(0px 0px 15px rgba(107, 232, 135, 0.37));
             margin-left: 20px;
           }
           &-line {
             &__left {
-              background: linear-gradient(-90deg, #6BE887 0%, rgba(107, 232, 135, 0.00) 100%);
+              background: linear-gradient(-90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
             }
             &__right {
-              background: linear-gradient(90deg, #6BE887 0%, rgba(107, 232, 135, 0.00) 100%);
+              background: linear-gradient(90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
             }
           }
         }

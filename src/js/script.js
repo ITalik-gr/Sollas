@@ -1,8 +1,6 @@
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
-    accordionImage = document.querySelectorAll('.faq-accordion-image svg path'),
-    factsCard = document.querySelectorAll('.facts-card'),
-    factsCardFirst = factsCard[0];
+    accordionImage = document.querySelectorAll('.faq-accordion-image svg path');
     
 
 
@@ -34,61 +32,6 @@ accordionNav.forEach((item, i) => {
     
   })
 })
-
-
-
-//? Facts animation
-//? fact card obbserver, visibility check
-
-let factVisible = false;
-const movingElement = factsCard[1];
-let currentPosition = 0; // Базова позиція
-
-const scrollHandler = () => {
-  console.log('Scroll');
-  let currentPosition = 0; // Базова позиція
-  
-  const maxPosition = 200; // Максимальний зсув
-  const minPosition = 0;   // Мінімальний зсув
-  
-  window.addEventListener('scroll', () => {
-      if (window.scrollY > currentPosition && currentPosition < maxPosition) {
-          currentPosition = Math.min(currentPosition + 1, maxPosition);
-      } else if (window.scrollY < currentPosition && currentPosition > minPosition) {
-          currentPosition = Math.max(currentPosition - 1, minPosition);
-      }
-      
-      movingElement.style.transform = `translateY(${currentPosition}px)`;
-  });
-  
-};
-
-function callback(entries, observer) {
-     entries.forEach((entry) => {
-       if(entry.isIntersecting) {
-         console.log("Fully visible"); 
-        //  window.addEventListener('scroll', scrollHandler);
-       } else {
-         console.log("not fully visible");
-        //  window.removeEventListener('scroll', scrollHandler);
-       }
-    });
-}
-function createObserver(factsCardFirst, callback) {
-   const options = {
-      root: null,
-      threshold: 0.1
-   };
-   const observer = new IntersectionObserver(callback, options);
-   observer.observe(factsCardFirst);
-}
-  
-createObserver(factsCardFirst, callback);
-console.log(factVisible)
-
-if(factVisible == true) {
-
-}
 
 
 
