@@ -15,7 +15,6 @@ function closeAccordion(i) {
   accordionBody[i].classList.remove('faq-accordion-body--active');
   accordionImage[i].setAttribute('d', 'M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z')
 }
-openAccordion(0);
 accordionNav.forEach((item, i) => {
   item.addEventListener('click', () => {
     if(accordionBody[i].classList.contains('faq-accordion-body--active')) {

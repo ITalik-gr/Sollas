@@ -3,16 +3,12 @@
   padding: 76px 0 110px 0;
   color: #FFF;
   &-title {
-    color: #FFF;
-    margin-bottom: 25px;
-  }
-  &-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 114%;
-    letter-spacing: -0.54px;
+    font-size: 72px;
+    line-height: 114%; /* 82.08px */
+    letter-spacing: -2.16px;
     margin-bottom: 80px;
+    color: #FFF;
+    text-align: center;
   }
   &-wrap {
     display: flex;

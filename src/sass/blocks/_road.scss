@@ -1,3 +1,86 @@
 .road {
-  
+  margin-bottom: 130px;
+  &-wrap {
+    border-radius: 24px;
+    background: #111;
+    padding: 94px 50px 86px;
+    display: flex;
+  }
+
+  &-card {
+    &-image {
+      margin-bottom: 35px;
+      position: relative;
+      width: fit-content;
+    }
+    &-circle {
+      width: 16px;
+      height: 16px;
+      background-color: #FFF;
+      border-radius: 100%;
+      display: flex;
+    }
+    &-line {
+      position: absolute;
+      height: 1px;
+      width: 95px;
+      background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+      top: 50%;
+      transform: translateY(-50%);
+      &__left {
+        right: 40px;
+        background: linear-gradient(-90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+      }
+      &__right {
+        left: 40px;
+      }
+    }
+
+    &__title {
+      color: #FFF;
+      font-size: 22px;
+      line-height: 114%;
+      letter-spacing: -0.66px;
+      margin-bottom: 28px;
+    }
+    &__descr {
+      color: #BEBEBE;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 125%;
+      letter-spacing: -0.54px;
+    }
+
+
+    &__1 {
+      margin-right: 92px;
+      .road-card {
+        &__descr {
+          max-width: 227px;
+        }
+      }
+    }
+    &__2 {
+      margin-right: 244px;
+      .road-card {
+        &__descr {
+          max-width: 255px;
+        }
+      }
+    }
+    &__3 {
+      .road-card {
+        &__descr {
+          max-width: 333px;
+        }
+        &-circle {
+          background-color: #FB7B54;
+        }
+        &-line {
+          background: linear-gradient(-90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
+          width: 269px;
+        }
+      }
+    }
+  }
 }
