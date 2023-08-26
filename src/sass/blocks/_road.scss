@@ -6,6 +6,9 @@
     padding: 94px 50px 86px;
     display: flex;
     justify-content: space-between;
+    @include Screen-992 {
+      padding: 84px 30px 76px;
+    }
   }
 
   &-card {

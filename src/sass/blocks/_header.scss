@@ -78,8 +78,12 @@
     line-height: 114%;
     letter-spacing: -1.8px;
     margin-bottom: 22px;
+    text-align: center;
     @include Screen-1200 {
       font-size: 62px;
+    }
+    @include Screen-992 {
+      font-size: 56px;
     }
   }
   &-descr {

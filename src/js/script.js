@@ -59,3 +59,22 @@ var typed = new Typed('.typing', {
 
 // Scroll animation
 AOS.init();
+
+// swiper 
+
+const swiper = new Swiper('.facts-slider', {
+  autoplay: {
+    delay: 5000,
+  },
+  spaceBetween: 20,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.3,
+    },
+    // when window width is >= 640px
+    767: {
+      slidesPerView: 2,
+    }
+  }
+});

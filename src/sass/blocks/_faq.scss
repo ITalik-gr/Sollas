@@ -4,12 +4,17 @@
 
   }
   &-title {
-
+    @include Screen-992 {
+      margin-bottom: 48px;
+    }
   }
 
   &-wrap {
     display: flex;
     justify-content: space-between;
+    @include Screen-992 {
+      flex-direction: column;
+    }
   }
   &-accordion {
     width: 704px;

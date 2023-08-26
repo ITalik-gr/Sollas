@@ -7,6 +7,15 @@
   &-wrap {
     display: flex;
     justify-content: space-between;
+    @include Screen-992 {
+      display: none;
+    }
+  }
+  &--mobile {
+    display: none;
+    @include Screen-992 {
+      display: block;
+    }
   }
 
   &-card {
@@ -19,6 +28,9 @@
     width: 100%;
     margin-right: 20px;
     will-change: transform;
+    @include Screen-992 {
+      height: 353px;
+    }
     &:nth-child(2) {
       animation: scrollFirstFact linear both;
       animation-timeline: view(block);
@@ -51,6 +63,9 @@
       line-height: 135%; /* 29.7px */
       letter-spacing: -0.11px;
       margin-bottom: 12px;
+      @include Screen-992 {
+        font-size: 18px;
+      }
     }
     &__descr {
       color: #484848;
@@ -60,6 +75,9 @@
       letter-spacing: -0.09px;
       max-width: 302px;
       text-wrap: pretty;
+      @include Screen-992 {
+        font-size: 16px;
+      }
     }
     &:nth-child(2) {
       .facts-card__descr {
