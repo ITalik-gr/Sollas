@@ -36,6 +36,10 @@
       line-height: 135%; 
       letter-spacing: -0.32px;
       margin-bottom: 154px;
+      @include Screen-992 {
+        font-size: 48px;
+        margin-bottom: 84px;
+      }
     }
 
     &__text {

@@ -1,6 +1,9 @@
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
-    accordionImage = document.querySelectorAll('.faq-accordion-image svg path');
+    accordionImage = document.querySelectorAll('.faq-accordion-image svg path'),
+    workCardImage = document.querySelectorAll('.work-card__image img')[0],
+    workCard = document.querySelectorAll('.work-card');
+    
     
 
 
@@ -32,6 +35,16 @@ accordionNav.forEach((item, i) => {
   })
 })
 
+// css resize
+
+function resizeWorkCard() {
+  let h = workCardImage.height;
+  workCard.forEach((item) => {
+    item.style.height = `${h}px`;
+  })
+}
+resizeWorkCard()
+// window.addEventListener('resize', resizeWorkCard)
 
 
 // Typing animation

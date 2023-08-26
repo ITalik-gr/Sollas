@@ -3,7 +3,6 @@
   padding: 76px 0 110px 0;
   color: #FFF;
   &-title {
-    font-size: 72px;
     line-height: 114%; /* 82.08px */
     letter-spacing: -2.16px;
     margin-bottom: 80px;
@@ -14,6 +13,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 110px;
+    @include Screen-992 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   &-card {
@@ -29,6 +32,10 @@
     max-width: 426px;
     width: 100%;
     margin-right: 20px;
+    @include Screen-992 {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -44,6 +51,9 @@
       line-height: normal;
       letter-spacing: -0.1px;
       margin-bottom: 12px;
+      @include Screen-1200 {
+        font-size: 19px;
+      }
     }
     &__price {
       color: #FFF;

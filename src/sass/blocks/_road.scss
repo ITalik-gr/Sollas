@@ -5,6 +5,7 @@
     background: #111;
     padding: 94px 50px 86px;
     display: flex;
+    justify-content: space-between;
   }
 
   &-card {
@@ -12,6 +13,9 @@
       margin-bottom: 35px;
       position: relative;
       width: fit-content;
+      @include Screen-992 {
+        display: none;
+      }
     }
     &-circle {
       width: 16px;
@@ -62,6 +66,9 @@
     }
     &__2 {
       margin-right: 244px;
+      @include Screen-1200 {
+        margin-right: 84px;
+      }
       .road-card {
         &__descr {
           max-width: 255px;
@@ -79,7 +86,20 @@
         &-line {
           background: linear-gradient(-90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
           width: 269px;
+          @include Screen-1200 {
+            width: 130px;
+          }
         }
+      }
+    }
+
+
+    // card
+
+    @include Screen-992 {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

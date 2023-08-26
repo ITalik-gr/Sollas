@@ -1,6 +1,7 @@
 
 @import 'libs/general-sans.css';
 @import 'libs/bootstrap-reboot.min';
+@import 'base/variables';
 
 * {
     font-family: 'GeneralSans', sans-serif;
@@ -57,6 +58,12 @@ p {
         font-size: 72px;
         line-height: 114%;
         letter-spacing: -2.16px;
+        @include Screen-1200 {
+            font-size: 62px;
+        }
+        @include Screen-992 {
+            font-size: 56px;
+        }
     }
 }
 

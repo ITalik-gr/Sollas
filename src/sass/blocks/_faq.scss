@@ -15,6 +15,9 @@
     width: 704px;
     margin-bottom: 42px;
     overflow: hidden;
+    @include Screen-992 {
+      width: 634px;
+    }
     &:last-child {
       margin-bottom: 0;
     }

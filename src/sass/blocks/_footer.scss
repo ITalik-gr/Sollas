@@ -18,12 +18,18 @@
 
   &-logo {
     margin-right: 83px;
+    @include Screen-992 {
+      margin-right: 50px;
+    }
   }
   &-list {
     display: flex;
     align-items: center;
     &__item {
       margin-right: 58px;
+      @include Screen-992 {
+        margin-right: 44px;
+      }
       &:last-child {
         margin-right: 0;
       }
