@@ -4,6 +4,11 @@
   background: #EBEEF9;
   padding: 120px 0;
   margin-bottom: 42px;
+  overflow: hidden;
+  @include Screen-576 {
+    padding: 32px 0;
+    margin-bottom: 44px;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
@@ -31,6 +36,14 @@
     @include Screen-992 {
       height: 353px;
     }
+    @include Screen-576 {
+      width: 256px;
+      height: 250px;
+      padding: 16px 30px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     &:nth-child(2) {
       animation: scrollFirstFact linear both;
       animation-timeline: view(block);
@@ -52,6 +65,10 @@
         font-size: 48px;
         margin-bottom: 84px;
       }
+      @include Screen-576 {
+        font-size: 32px;
+        margin-bottom: 0px;
+      }
     }
 
     &__text {
@@ -66,6 +83,9 @@
       @include Screen-992 {
         font-size: 18px;
       }
+      @include Screen-576 {
+        font-size: 16px;
+      }
     }
     &__descr {
       color: #484848;
@@ -78,10 +98,15 @@
       @include Screen-992 {
         font-size: 16px;
       }
+      @include Screen-576 {
+        font-size: 14px;
+        max-width: 310px;
+      }
+
     }
     &:nth-child(2) {
       .facts-card__descr {
-        max-width: 317px;
+        max-width: 210px;
       }
       
     }

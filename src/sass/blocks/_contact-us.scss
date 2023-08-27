@@ -18,6 +18,9 @@
     @include Screen-992 {
       font-size: 44px;
     }
+    @include Screen-768 {
+      font-size: 36px;
+    }
   }
   &-btn {
     border-radius: 12px;

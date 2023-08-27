@@ -2,12 +2,18 @@
   background-color: #111;
   padding: 76px 0 110px 0;
   color: #FFF;
+  @include Screen-992 {
+    padding: 40px 0 48px 0;
+  }
   &-title {
     line-height: 114%; /* 82.08px */
     letter-spacing: -2.16px;
     margin-bottom: 80px;
     color: #FFF;
     text-align: center;
+    @include Screen-992 {
+      margin-bottom: 38px;
+  }
   }
   &-wrap {
     display: flex;
@@ -17,6 +23,9 @@
       flex-direction: column;
       align-items: center;
     }
+    @include Screen-992 {
+      margin-bottom: 29px;
+  }
   }
   
   &-card {

@@ -64,13 +64,22 @@ p {
         @include Screen-992 {
             font-size: 56px;
         }
+        @include Screen-768 {
+            font-size: 42px;
+        }
+        @include Screen-576 {
+            font-size: 32px;
+        }
     }
 }
 
 .container {
     margin: 0 auto;
     padding: 0 64px;
-    max-width: 1440px
+    max-width: 1440px;
+    @include Screen-768 {
+        padding: 0 20px;
+    }
 }
 
 

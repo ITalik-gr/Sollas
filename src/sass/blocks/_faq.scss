@@ -16,13 +16,19 @@
       flex-direction: column;
     }
   }
+  &-accordions {
+    display: flex;
+    flex-direction: column;
+  }
   &-accordion {
     width: 704px;
     margin-bottom: 42px;
     overflow: hidden;
     @include Screen-992 {
-      width: 634px;
+      width: 100%;
+      max-width: 730px;
     }
+
     &:last-child {
       margin-bottom: 0;
     }

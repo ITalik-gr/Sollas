@@ -63,14 +63,16 @@ AOS.init();
 // swiper 
 
 const swiper = new Swiper('.facts-slider', {
-  autoplay: {
-    delay: 5000,
-  },
   spaceBetween: 20,
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+    },
+    440: {
+      slidesPerView: 1.5,
+      spaceBetween: 16,
     },
     // when window width is >= 640px
     767: {

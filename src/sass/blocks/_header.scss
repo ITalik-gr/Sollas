@@ -3,18 +3,57 @@
 .nav {
   padding: 26px 0;
   margin-bottom: 78px;
+  @include Screen-576 {
+    margin-bottom: 52px;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &-logo {
-
+    @include Screen-576 {
+      svg {
+        width: 72px;
+      }
+    }
+  }
+  &-hamburger {
+    height: 16px;
+    width: 24px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    @include Screen-768 {
+      display: block;
+    }
+    span, &::before, &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #FFF;
+      border-radius: 12px;
+    }
+    &::before {
+      top: 0;
+    }
+    span {
+      top: calc(50% - 1px);
+    }
+    &::after {
+      bottom: 0;
+      width: 60%;
+    }
   }
 
   &-list {  
     display: flex;
     align-items: center;
+    @include Screen-768 {
+      display: none;
+    }
     &__item {
       margin-right: 75px;
       &:last-child {
@@ -43,33 +82,17 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 88px;
+  @include Screen-576 {
+    padding-bottom: 42px;
+  }
   &-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  &-achiev { // ачивка
-    border-radius: 28px;
-    background: #242424;
-    color:  #FB7B54;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 135.5%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 22px;
-    svg {
-
+    @include Screen-576 {
+      align-items: flex-start;
     }
-    &__text { // текст по середині
-      color: #BEBEBE;
-      font-weight: 500!important;
-      margin: 0 6px;
-    }
-    
   }
 
   &-title {
@@ -85,6 +108,14 @@
     @include Screen-992 {
       font-size: 56px;
     }
+    @include Screen-768 {
+      font-size: 48px;
+    }
+    @include Screen-576 {
+      font-size: 36px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
   }
   &-descr {
     color: #BEBEBE;
@@ -96,15 +127,36 @@
     margin-bottom: 40px;
     max-width: 380px;
     text-wrap: pretty;
+    @include Screen-768 {
+      font-size: 16px;
+    }
+    @include Screen-576 {
+      text-align: left;
+      max-width: 280px;
+      margin-bottom: 75px;
+    }
   }
   &-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include Screen-576 {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &-btn {
+    @include Screen-576 {
+      width: 100%;
+    }
     &:last-child {
       margin-left: 16px;
+      @include Screen-576 {
+        margin-left: 0;
+        margin-top: 16px;
+      }
     }
   }
 
@@ -116,9 +168,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 12px;
+    margin-bottom: 12px;
+    @include Screen-768 {
+      padding: 13px;
+    }
+    @include Screen-576 {
+      padding: 10px;
+    }
     &__image {
       margin-right: 24px;
+      @include Screen-576 {
+        width: 53px;
+        margin-right: 16px;
+      }
     }
     &__text {
       display: flex;
@@ -131,6 +193,9 @@
       color: #FFF;
       font-size: 16px;
       line-height: 135.5%;
+      @include Screen-576 {
+        font-size: 14px;
+      }
     }
   }
 
@@ -139,6 +204,9 @@
     margin-top: 170px;
     display: flex;
     align-items: center;
+    @include Screen-768 {
+      display: none;
+    }
   }
 }
 

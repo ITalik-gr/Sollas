@@ -3,15 +3,24 @@
   @include Screen-992 {
     margin-bottom: 70px;
   }
+  @include Screen-576 {
+    margin-bottom: 54px;
+  }
   &-title {
     margin-bottom: 54px;
     @include Screen-992 {
       margin-bottom: 34px;
     }
+    @include Screen-576 {
+      margin-bottom: 24px;
+    }
   }
   &-wrap {
     display: flex;
     flex-direction: column;
+    @include Screen-576 {
+      align-items: center;
+    }
   }
 
   &-row {
@@ -45,6 +54,10 @@
       max-width: 511px;
       height: 325px;
     }
+    @include Screen-576 {
+      width: 280px;
+      padding: 13px;
+    }
     &:hover {
       .work-card__image {
         transform: scale(1.1);
@@ -71,6 +84,13 @@
       height: 100%;
       img {
         max-width: 100%;
+        @include Screen-576 {
+          max-width: 280px;
+          max-height: 277px;
+          height: 100%;
+          width: 100%;
+          // object-fit: fill;
+        }
       }
     }
     &-bottom {
@@ -78,6 +98,9 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      @include Screen-576 {
+        justify-content: center;
+      }
     }
 
     &-info {
@@ -95,6 +118,9 @@
         font-size: 16px;
         padding: 10px;
       }
+      @include Screen-576 {
+        font-size: 12px;
+      }
       &__name {
 
       }
@@ -106,6 +132,9 @@
         margin: 0 16px;
         @include Screen-992 {
           width: 7px;height: 7px;
+        }
+        @include Screen-576 {
+          margin: 0 11px;
         }
       }
       &__time {
@@ -125,6 +154,9 @@
       @include Screen-992 {
         width: 38px;
         height: 38px;
+      }
+      @include Screen-576 {
+        display: none;
       }
     }
   }
