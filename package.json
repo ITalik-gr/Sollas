@@ -26,6 +26,7 @@
     "not dead"
   ],
   "dependencies": {
+    "firebase": "^10.3.0",
     "gulp-sass": "^5.1.0"
   }
 }

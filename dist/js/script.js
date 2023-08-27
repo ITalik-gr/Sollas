@@ -35,7 +35,7 @@ accordionNav.forEach((item, i) => {
   })
 })
 
-// css resize
+//? css resize
 
 function resizeWorkCard() {
   let h = workCardImage.height;
@@ -44,10 +44,30 @@ function resizeWorkCard() {
   })
 }
 resizeWorkCard()
-// window.addEventListener('resize', resizeWorkCard)
+
+//? mobile menu
+
+const menu = document.querySelector('.menu'),
+      menuClose = document.querySelector('.menu-close'),
+      menuOpen = document.querySelector('.nav-hamburger'),
+      menuListItems = document.querySelectorAll('.menu-list__item');
+
+menuOpen.addEventListener('click', () => {
+  menu.classList.add('menu--active');
+})
+menuListItems.forEach(item => {
+  item.addEventListener('click', () => {
+    menu.classList.remove('menu--active');
+  })
+})
 
 
-// Typing animation
+menuClose.addEventListener('click', () => {
+  menu.classList.remove('menu--active');
+})
+
+
+//? Typing animation
 var typed = new Typed('.typing', {
   strings: ['web', 'app', 'SaaS'],
   loop: true,
@@ -57,10 +77,10 @@ var typed = new Typed('.typing', {
   showCursor: false,
 });
 
-// Scroll animation
+//? Scroll animation
 AOS.init();
 
-// swiper 
+//? swiper 
 
 const swiper = new Swiper('.facts-slider', {
   spaceBetween: 20,

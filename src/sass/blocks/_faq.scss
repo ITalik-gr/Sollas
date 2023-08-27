@@ -1,11 +1,17 @@
 .faq {
   padding: 120px 0;
+  @include Screen-576 {
+    padding: 64px 0;
+  }
   &-text {
 
   }
   &-title {
     @include Screen-992 {
       margin-bottom: 48px;
+    }
+    @include Screen-576 {
+      font-size: 42px;
     }
   }
 
@@ -28,7 +34,9 @@
       width: 100%;
       max-width: 730px;
     }
-
+    @include Screen-576 {
+      margin-bottom: 32px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -41,10 +49,10 @@
     &-body {
       height: auto;
       max-height: 0px;
-      transition: .6s all;
+      transition: .9s all;
       visibility: hidden;
       &--active {
-        max-height: 300px;
+        max-height: 1300px;
         visibility: visible;
       }
     }
@@ -53,6 +61,10 @@
       font-size: 22px;
       line-height: 145%; /* 31.9px */
       margin-bottom: 8px;
+      @include Screen-576 {
+        font-size: 16px;
+        max-width: 240px;
+      }
     }
     &-image {
       svg {

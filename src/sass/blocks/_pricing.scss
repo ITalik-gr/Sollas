@@ -13,7 +13,12 @@
     text-align: center;
     @include Screen-992 {
       margin-bottom: 38px;
-  }
+    }
+    @include Screen-576 {
+      margin-bottom: 24px;
+      max-width: 270px;
+      text-align: left;
+    }
   }
   &-wrap {
     display: flex;
@@ -43,7 +48,14 @@
     margin-right: 20px;
     @include Screen-992 {
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    @include Screen-576 {
+      padding: 24px 16px;
+      height: 550px;
+      &:first-child {
+        height: 502px;
+      }
     }
     &:last-child {
       margin-right: 0;
@@ -53,6 +65,11 @@
     }
     &__contact {
       max-height: 384px;
+      margin-bottom: 12px;
+      @include Screen-576 {
+        max-height: 306px;
+        margin-bottom: 0;
+      }
     }
     &__name {
       font-size: 20px;
@@ -63,21 +80,27 @@
       @include Screen-1200 {
         font-size: 19px;
       }
+      @include Screen-576 {
+        font-size: 14px;
+      }
     }
     &__price {
       color: #FFF;
       font-size: 52px;
       line-height: normal;
       letter-spacing: -0.78px;
-    }
-    &__contact {
-      margin-bottom: 12px;
+      @include Screen-576 {
+        font-size: 42px;
+      }
     }
     &__descr {
       font-size: 18px;
       font-weight: 500;
       line-height: 146.5%;
       letter-spacing: -0.27px;
+      @include Screen-576 {
+        font-size: 16px;
+      }
     }
     &__hr {
       height: 1px;
@@ -92,8 +115,12 @@
         line-height: normal;
         letter-spacing: -0.27px;
         margin-bottom: 18px;
-        padding-left: 17px;
+        margin-left: 17px;
+        padding-left: 9px;
         position: relative;
+        @include Screen-576 {
+          font-size: 16px;
+        }
         &::before {
           content: '';
           width: 8px;
@@ -123,6 +150,9 @@
       cursor: pointer;
       height: 64px;
       width: 100%;
+      @include Screen-576 {
+
+      }
       &:hover {
         background: #FFF;
         color: #111;
@@ -141,12 +171,21 @@
     display: flex;
     align-items: center;
     max-width: 869px;
+    @include Screen-576 {
+      padding: 20px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &-wrap {
       display: flex;
       justify-content: center;
     }
     &__image {
       margin-right: 32px;
+      @include Screen-576 {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
     }
     &__text {
 
@@ -157,6 +196,9 @@
       line-height: normal;
       letter-spacing: -0.18px;
       margin-bottom: 12px;
+      @include Screen-576 {
+        font-size: 16px;
+      }
     }
     &__descr {
       color: rgba(255, 255, 255, 0.8);
@@ -164,6 +206,9 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.18px;
+      @include Screen-576 {
+        font-size: 16px;
+      }
     }
   }
 }
