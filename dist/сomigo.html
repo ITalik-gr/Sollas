@@ -3,16 +3,16 @@
       menuOpen = document.querySelector('.nav-hamburger'),
       menuListItems = document.querySelectorAll('.menu-list__item');
 
-menuOpen.addEventListener('click', () => {
-  menu.classList.add('menu--active');
-})
-menuListItems.forEach(item => {
-  item.addEventListener('click', () => {
-    menu.classList.remove('menu--active');
+  menuOpen.addEventListener('click', () => {
+    menu.classList.add('menu--active');
   })
-})
+  menuListItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menu.classList.remove('menu--active');
+    })
+  })
 
 
-menuClose.addEventListener('click', () => {
-  menu.classList.remove('menu--active');
-})</script></body></html>
+  menuClose.addEventListener('click', () => {
+    menu.classList.remove('menu--active');
+  })</script></body></html>
