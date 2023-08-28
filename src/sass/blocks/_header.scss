@@ -102,6 +102,9 @@
     letter-spacing: -1.8px;
     margin-bottom: 22px;
     text-align: center;
+    br {
+      display: none;
+    }
     @include Screen-1200 {
       font-size: 62px;
     }
@@ -115,6 +118,9 @@
       font-size: 36px;
       margin-bottom: 16px;
       text-align: left;
+      br {
+        display: block;
+      }
     }
   }
   &-descr {
@@ -204,9 +210,9 @@
   &-timeline {
     margin-top: 170px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    @include Screen-768 {
+    @include Screen-992 {
       display: none;
     }
   }
@@ -225,8 +231,14 @@
       flex-direction: column;
       align-items: flex-start;
       text-align-last: left;
-      @include Screen-1400 {
-        // margin-right: -5px;
+      .timeline-item__image-circle {
+        &::after {
+          left: 36px;
+          width: 187px;
+          @include Screen-1200 {
+            width: 119px;
+          }
+        }
       }
     }
     &__2 {
@@ -241,18 +253,24 @@
           &-circle {
             background-color: #FB7B54;
             filter: drop-shadow(0px 0px 15px rgba(107, 232, 135, 0.37));
-            margin-left: 20px;
-          }
-          &-line {
-            &__left {
+            &::before {
+              right: 36px;
+              left: auto;
+              width: 187px;
               background: linear-gradient(-90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
+              @include Screen-1200 {
+                width: 119px;
+              }
             }
-            &__right {
+            &::after {
+              left: 36px;
+              width: 144px;
               background: linear-gradient(90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
-              @include Screen-1400 {
+              @include Screen-1200 {
                 width: 84px;
               }
             }
+            
           }
         }
       }
@@ -262,20 +280,20 @@
         margin-left: -4px;
         &__image {
           &-circle {
-            margin-left: 20px;
             margin-right: 0;
-          }
-          &-line {
-            &__left {
+            &::before {
+              right: 36px;
+              left: auto;
               width: 145px;
               background: linear-gradient(-90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-              @include Screen-1400 {
+              @include Screen-1200 {
                 width: 83px;
               }
             }
-            &__right {
-              background-color: #FFF;
-              width: 170px;
+            &::after {
+              left: 16px;
+              width: 200px;
+              background: #FFF;
             }
           }
         }
@@ -287,13 +305,13 @@
         &__image {
           &-circle {
             margin-right: 0;
-          }
-          &-line {
-            &__left {
-              width: 257px;
-              background-color: #FFF;
-              @include Screen-1400 {
-                width: 180px;
+            &::before {
+              right: 16px;
+              left: auto;
+              width: 390px;
+              background: #FFF;
+              @include Screen-1200 {
+                width: 200px;
               }
             }
           }
@@ -320,19 +338,18 @@
       margin-bottom: 17px;
       display: flex;
       align-items: center;
+      position: relative;
       &-circle {
         min-width: 16px;
         min-height: 16px;
         border-radius: 100%;
         background-color: #FFF;
-        margin-right: 20px;
-      }
-      &-line {
-        height: 1px;
-        width: 187px;
-        background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-        @include Screen-1400 {
-          width: 119px;
+        &:before, &::after {
+          content: '';
+          position: absolute;
+          height: 1px;
+          top: calc(50% - 0.5px);
+          background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
         }
       }
     }

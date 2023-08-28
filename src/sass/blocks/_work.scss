@@ -61,6 +61,7 @@
     }
     @include Screen-576 {
       width: 280px;
+      margin-right: 0;
       padding: 13px;
       &:hover {
         .work-card__image {
