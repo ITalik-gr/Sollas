@@ -22,7 +22,9 @@
     }
   }
   &-left {
-    margin-bottom: 42px;
+    @include Screen-992 {
+      margin-bottom: 42px;
+    }
   }
   &-right {
     @include Screen-576 {
@@ -78,7 +80,7 @@
   &-social {
     display: flex;
     align-items: center;
-    @include Screen-992 {
+    @include Screen-576 {
       margin-bottom: 54px;
     }
     &-item {

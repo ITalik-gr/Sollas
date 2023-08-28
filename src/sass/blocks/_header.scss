@@ -65,12 +65,19 @@
         font-weight: 500;
         line-height: 114%;
         letter-spacing: -0.08px;
+        display: flex;
       }
     }
 
     &__contact {
       font-weight: 600!important;
+      &:hover {
+        svg {
+          transform: translateX(3px);
+        }
+      }
       svg {
+        transition: .3s all;
         margin-left: 8px;
       }
     }
@@ -131,7 +138,7 @@
     line-height: 135.5%;
     letter-spacing: -0.18px;
     margin-bottom: 40px;
-    max-width: 380px;
+    max-width: 430px;
     text-wrap: pretty;
     @include Screen-768 {
       font-size: 16px;
