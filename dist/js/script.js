@@ -44,6 +44,9 @@ function resizeWorkCard() {
   })
 }
 resizeWorkCard()
+setTimeout(() => {
+  resizeWorkCard()
+}, 2000);
 
 //? mobile menu
 

@@ -204,6 +204,7 @@
   &-timeline {
     margin-top: 170px;
     display: flex;
+    justify-content: center;
     align-items: center;
     @include Screen-768 {
       display: none;
@@ -224,6 +225,9 @@
       flex-direction: column;
       align-items: flex-start;
       text-align-last: left;
+      @include Screen-1400 {
+        // margin-right: -5px;
+      }
     }
     &__2 {
       .timeline-item {
@@ -245,6 +249,9 @@
             }
             &__right {
               background: linear-gradient(90deg, #FB7B54 0%, rgba(251, 123, 84, 0.00) 100%);
+              @include Screen-1400 {
+                width: 84px;
+              }
             }
           }
         }
@@ -262,6 +269,9 @@
             &__left {
               width: 145px;
               background: linear-gradient(-90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+              @include Screen-1400 {
+                width: 83px;
+              }
             }
             &__right {
               background-color: #FFF;
@@ -282,6 +292,9 @@
             &__left {
               width: 257px;
               background-color: #FFF;
+              @include Screen-1400 {
+                width: 180px;
+              }
             }
           }
         }
@@ -318,6 +331,9 @@
         height: 1px;
         width: 187px;
         background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        @include Screen-1400 {
+          width: 119px;
+        }
       }
     }
     &__time {

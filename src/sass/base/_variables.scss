@@ -1,5 +1,5 @@
 @mixin Screen-1400 {
-  @media (width >= 1400) {
+  @media (max-width: 1400px) {
     //1200
     @content;
   }
