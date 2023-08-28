@@ -50,6 +50,7 @@
     max-width: 272px;
     @include Screen-992 {
       font-size: 16px;
+      max-width: 282px;
     }
   }
   &-main {
@@ -224,14 +225,77 @@
   }
 }
 
+.cont-block {
+  background: #08090C;
+  padding: 53px 23px 61px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include Screen-576 {
+    padding: 62px 0px 30px 0;
+  }
+  &__title {
+    color: #FFF;
+    text-align: center;
+    font-size: 80px;
+    line-height: 101%; /* 80.8px */
+    letter-spacing: -0.4px;
+    margin-bottom: 59px;
+    @include Screen-1200 {
+      font-size: 60px;
+    }
+    @include Screen-576 {
+      font-size: 33px;
+      max-width: 260px;
+    }
+  }
+  &__image {
+    @include Screen-576 {
+      width: 100%;
+    }
+    img {
+      max-width: 865px;
+    }
+  }
+}
 .mw-450 {
   max-width: 450px;
 }
 .mw-372 {
   max-width: 372px;
 }
+.mw-607 {
+  max-width: 607px;
+}
+.mw-868 {
+  max-width: 868px;
+}
+.mw-956 {
+  max-width: 956px;
+}
+.mw-537 {
+  max-width: 537px;
+  @include Screen-576 {
+    max-width: 282px;
+  }
+}
+
+
 .mw-270 {
   @include Screen-576 {
     max-width: 170px;
+  }
+}
+
+.mw-199 {
+  @include Screen-576 {
+    max-width: 199px;
+  }
+}
+
+.mw-280 {
+  @include Screen-576 {
+    max-width: 280px;
   }
 }
