@@ -82,6 +82,28 @@
       }
     }
   }
+
+  &-white {
+    margin-bottom: 149px;
+    @include Screen-992 {
+      margin-bottom: 46px;
+    }
+    .nav {
+      &-list__item a {
+        color: #111;
+        svg {
+          path {
+            stroke: rgba(17, 17, 17, 1);
+          }
+        }
+      }
+      &-hamburger {
+        span, &::after, &::before {
+          background-color: #111;
+        }
+      }
+    }
+  }
 }
 
 .header {

@@ -1,0 +1,237 @@
+.case {
+  .container-image {
+    @include Screen-576 {
+      padding: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+  &-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    @include Screen-992 {
+      margin-bottom: 24px;
+    }
+    @include Screen-768 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &-title {
+    color:  #111;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 114%;
+    letter-spacing: -2.5px;
+    @include Screen-1200 {
+      font-size: 84px;
+    }
+    @include Screen-992 {
+      font-size: 58px;
+    }
+    @include Screen-768 {
+      margin-bottom: 48px;
+      margin-bottom: 10px;
+    }
+    @include Screen-576 {
+      font-size: 42px;
+    }
+  }
+  &-descr {
+    color: #484848;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.09px;
+    max-width: 272px;
+    @include Screen-992 {
+      font-size: 16px;
+    }
+  }
+  &-main {
+    &-image {
+      margin-bottom: 102px;
+      @include Screen-992 {
+        margin-bottom: 40px;
+      }
+      img {
+        max-height: 587px;
+      }
+    }
+  }
+
+  &-items { // три айтема з інфою внизу лінія
+    padding-bottom: 102px;
+    margin-bottom: 102px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include Screen-992 {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 38px;
+      margin-bottom: 38px;
+    }
+  }
+  &-item {
+    @include Screen-992 {
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__title {
+      color:  #111;
+      font-size: 38px;
+      line-height: 135%; /* 51.3px */
+      letter-spacing: -0.19px;
+      margin-bottom: 8px;
+      @include Screen-1200 {
+        font-size: 32px;
+      }
+      @include Screen-576 {
+        font-size: 24px;
+      }
+    }
+    &__descr {
+      color: #484848;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 135%; /* 24.3px */
+      letter-spacing: -0.09px;
+      @include Screen-1200 {
+        max-width: 220px;
+      }
+      @include Screen-576 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-quote {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 158px;
+    @include Screen-992 {
+      margin-bottom: 115px;
+    }
+    &__item {
+      max-width: 908px;
+      color:  #111;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 135%; /* 43.2px */
+      letter-spacing: -0.16px;
+      @include Screen-992 {
+        font-size: 27px;
+      }
+      @include Screen-768 {
+        font-size: 24px;
+        text-align: left;
+      }
+      @include Screen-576 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-block {
+    margin-bottom: 158px;
+    @include Screen-992 {
+      margin-bottom: 76px;
+    }
+    &__text {
+
+    }
+    &__title {
+      color: #111;
+      font-size: 38px;
+      font-style: normal;
+      line-height: 135%; /* 51.3px */
+      letter-spacing: -0.19px;
+      margin-bottom: 16px;
+      @include Screen-992 {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+      @include Screen-768 {
+        font-size: 26px;
+      }
+      @include Screen-576 {
+        font-size: 20px;
+      }
+    }
+    &__descr {
+      margin-bottom: 36px;
+      max-width: 399px;
+      color: #484848;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 135%; /* 24.3px */
+      letter-spacing: -0.09px;
+      @include Screen-576 {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+    }
+    &__link {
+      color: rgba(17, 17, 17, 0.8);
+      text-decoration-line: underline;
+      display: block;
+      &:hover {
+        color: rgba(17, 17, 17, 0.8);
+      }
+    }
+    &-image {
+      max-width: 646px;
+      width: 100%;
+    }
+    &__images { // 2 картинки
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include Screen-768 {
+        flex-direction: column;
+      }
+      .case-block-image {
+        &:last-child {
+          margin-left: 20px;
+          @include Screen-768 {
+            margin-left: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    &__image { // якщо 1 картинка
+      img {
+        max-width: 100%;
+        margin-left: 0!important;
+        @include Screen-768 {
+          width: 800px;
+        }
+      }
+    }
+
+
+  }
+}
+
+.mw-450 {
+  max-width: 450px;
+}
+.mw-372 {
+  max-width: 372px;
+}
+.mw-270 {
+  @include Screen-576 {
+    max-width: 170px;
+  }
+}
