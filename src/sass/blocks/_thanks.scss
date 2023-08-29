@@ -1,0 +1,55 @@
+.thanks {
+  margin-bottom: 103px;
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-image {
+    margin-bottom: 42px;
+    @include Screen-576 {
+      margin-bottom: 33px;
+    }
+    img {
+      max-width: 424px;
+      width: 100%;
+    }
+  }
+  &-title {
+    color:  #111;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 114%; /* 114px */
+    letter-spacing: -2.5px;
+    margin-bottom: 16px;
+    @include Screen-992 {
+      font-size: 80px;
+    }
+    @include Screen-768 {
+      font-size: 60px;
+    }
+    @include Screen-576 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+  }
+  &-descr {
+    color:  rgba(17, 17, 17, 0.8);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 114%; /* 27.36px */
+    letter-spacing: -0.6px;
+    margin-bottom: 41px;
+    @include Screen-768 {
+      font-size: 20px;
+    }
+    @include Screen-576 {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+  }
+  &-btn {
+    width: 100%;
+  }
+}

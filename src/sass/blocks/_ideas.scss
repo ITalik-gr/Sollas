@@ -1,0 +1,220 @@
+.idea {
+  margin-bottom: 155px;
+  @include Screen-576 {
+    margin-bottom: 46px;
+  }
+  &-wrap {
+
+  }
+
+  &-title {
+    color: #111;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 114%; /* 114px */
+    letter-spacing: -2.5px;
+    margin-bottom: 125px;
+    @include Screen-1200 {
+      font-size: 80px;
+    }
+    @include Screen-768 {
+      font-size: 55px;
+      margin-bottom: 73px;
+    }
+    @include Screen-576 {
+      font-size: 42px;
+    }
+  }
+
+  &-form {
+    margin-bottom: 48px;
+    @include Screen-576 {
+      margin-bottom: 24px;
+    }
+  }
+  &-input {
+    color:  #111;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 114%; /* 36.48px */
+    letter-spacing: -0.8px;
+    max-width: 868px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
+    padding-bottom: 24px;
+    outline: none;
+    @include Screen-768 {
+      font-size: 20px;
+    }
+    @include Screen-576 {
+      padding-bottom: 20px;
+      margin-bottom: 46px;
+    }
+    &::placeholder {
+      color:  rgba(17, 17, 17, 0.4);
+    }
+    &:active, &:focus {
+      border-bottom: 1px solid #4695F2;
+    }
+    &--error {
+      border-bottom: 1px solid #FF4D4D;
+    }
+    &__wrap { // error + input
+      margin-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      @include Screen-576 {
+        margin-bottom: 46px;
+      }
+    }
+    &__error { // text span error
+      margin-top: 14px;
+      color: #FF4D4D;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 114%; /* 22.8px */
+      letter-spacing: -0.5px;
+      display: none;
+      @include Screen-768 {
+        font-size: 16px;
+      }
+      &--active {
+        display: block;
+      }
+    }
+  }
+  
+  &-name {
+
+  }
+  &-email {
+    margin-bottom: 0;
+    @include Screen-576 {
+      margin-bottom: 0px;
+    }
+  }
+  &-descr {
+
+  }
+  &-tags {
+    margin-bottom: 64px;
+    @include Screen-576 {
+      margin-bottom: 32px;
+    }
+    &__title {
+      color:  #111;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 114%; /* 36.48px */
+      letter-spacing: -0.8px;
+      margin-bottom: 47px;
+      @include Screen-768 {
+        font-size: 28px;
+        margin-bottom: 24px;
+      }
+      @include Screen-576 {
+        font-size: 20px;
+      }
+    }
+    &__wrap {
+      @include Screen-1200 {
+        flex-wrap: wrap;
+        display: flex;
+      }
+    }
+  }
+  &-tag {
+    padding: 20px;
+    color: #111;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 114%; /* 36.48px */
+    letter-spacing: -0.8px;
+    margin-right: 20px;
+    border-radius: 12px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    @include Screen-1200 {
+      margin-bottom: 12px;
+    }
+    @include Screen-768 {
+      font-size: 20px;
+      margin-right: 11px;
+      padding: 12px;
+    }
+    &--active {
+      background-color: #111;
+      color: #fff;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-btn {
+    border-radius: 12px;
+    background:  #111;
+    color: #FFF;
+    max-width: 961px;
+    width: 100%;
+    height: 118px;
+    font-size: 32px;
+    line-height: 30px; /* 93.75% */
+    letter-spacing: -0.32px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:disabled {
+      background: #C5C5C5;
+    }
+    @include Screen-768 {
+      height: 88px;
+      font-size: 23px;
+    }
+    @include Screen-576 {
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+
+
+  &-send-email { // link mailto:
+    color: rgba(17, 17, 17, 0.6);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 114%; /* 36.48px */
+    letter-spacing: -0.8px;
+    text-decoration-line: underline;
+    &__wrap {
+      @include Screen-576 {
+        text-align: center;
+      }
+    }
+    &:hover {
+      color: rgba(17, 17, 17, 0.6);
+    }
+    @include Screen-768 {
+      font-size: 22px;
+    }
+    @include Screen-576 {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+
+.contact-us__idea {
+  padding: 167px 0 103px 0;
+  @include Screen-576 {
+    padding: 72px 0 43px 0;
+  }
+  .contact-us {
+    &-title {
+      margin-bottom: 0;
+    }
+  }
+}
