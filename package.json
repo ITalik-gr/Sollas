@@ -26,7 +26,10 @@
     "not dead"
   ],
   "dependencies": {
+    "axios": "^1.5.0",
     "firebase": "^10.3.0",
-    "gulp-sass": "^5.1.0"
-  }
+    "gulp-sass": "^5.1.0",
+    "nodemailer": "^6.9.4"
+  },
+  "proxy": "http://localhost:3002"
 }

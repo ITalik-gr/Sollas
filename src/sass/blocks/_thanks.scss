@@ -50,6 +50,9 @@
     }
   }
   &-btn {
-    width: 100%;
+    @include Screen-576 {
+      width: 100%;
+    }
+    
   }
 }

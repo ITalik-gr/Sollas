@@ -134,6 +134,7 @@
         </h1>
 
         <form action="" class="idea-form">
+
           <input placeholder="Your Name*" required type="text" class="idea-input idea-name">
           
           <div class="idea-input__wrap">
@@ -151,12 +152,12 @@
             </div>
             <div class="idea-tags__wrap">
               <!-- idea-tag--active -->
-              <span class="idea-tag">SaaS</span>
-              <span class="idea-tag">Mobile App</span>
-              <span class="idea-tag">Web App</span>
-              <span class="idea-tag">Website</span>
-              <span class="idea-tag">AI</span>
-              <span class="idea-tag">Other</span>
+              <span data-tag="SaaS" class="idea-tag">SaaS</span>
+              <span data-tag="Mobile App" class="idea-tag">Mobile App</span>
+              <span data-tag="Web App" class="idea-tag">Web App</span>
+              <span data-tag="Website" class="idea-tag">Website</span>
+              <span data-tag="AI" class="idea-tag">AI</span>
+              <span data-tag="Other" class="idea-tag">Other</span>
             </div>
           </div>
 
@@ -249,26 +250,8 @@
     </div>
 </footer>
 
-  <script>
-    const menu = document.querySelector('.menu'),
-        menuClose = document.querySelector('.menu-close'),
-        menuOpen = document.querySelector('.nav-hamburger'),
-        menuListItems = document.querySelectorAll('.menu-list__item');
-  
-    menuOpen.addEventListener('click', () => {
-      menu.classList.add('menu--active');
-    })
-    menuListItems.forEach(item => {
-      item.addEventListener('click', () => {
-        menu.classList.remove('menu--active');
-      })
-    })
-  
-  
-    menuClose.addEventListener('click', () => {
-      menu.classList.remove('menu--active');
-    })
-  </script>
+
+<script type="module" src="js/form.js"></script>
 <body>
   
 </body>
