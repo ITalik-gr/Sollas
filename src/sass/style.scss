@@ -109,9 +109,16 @@ p {
     margin: 0 auto;
     padding: 0 64px;
     max-width: 1440px;
+    &-2 {
+        padding: 0px 286px;
+        @include Screen-1400 {
+            padding: 0 100px;
+        }
+    }
     @include Screen-768 {
         padding: 0 20px;
     }
+
 }
 
 .menu {
@@ -217,3 +224,4 @@ p {
 @import 'blocks/road';
 @import 'blocks/case';
 @import 'blocks/career';
+@import 'blocks/privacy';
