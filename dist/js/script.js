@@ -1,7 +1,7 @@
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
     accordionImage = document.querySelectorAll('.faq-accordion-image svg path'),
-    workCardImage = document.querySelectorAll('.work-card__image img')[0],
+    workCardImage = document.querySelectorAll('.work-card__image img')[3],
     workCard = document.querySelectorAll('.work-card');
     
     
@@ -39,14 +39,23 @@ accordionNav.forEach((item, i) => {
 
 function resizeWorkCard() {
   let h = workCardImage.height;
+  
   workCard.forEach((item) => {
-    item.style.height = `${h}px`;
+    console.log(h)
+    if(h == 0) {
+      item.style.height = `${350}px`;
+      setTimeout(() => {
+        item.style.height = `${workCardImage.height}px`;
+      }, 600);
+    } else {
+      item.style.height = `${workCardImage.height}px`;
+    }
+    
   })
 }
-resizeWorkCard()
-setTimeout(() => {
+if(workCardImage) {
   resizeWorkCard()
-}, 2000);
+}
 
 //? mobile menu
 
@@ -91,10 +100,22 @@ const swiper = new Swiper('.facts-slider', {
     // when window width is >= 320px
     320: {
       slidesPerView: 1.1,
+      spaceBetween: 14,
+    },
+    340: {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+    },
+    380: {
+      slidesPerView: 1.34,
       spaceBetween: 16,
     },
     440: {
       slidesPerView: 1.5,
+      spaceBetween: 16,
+    },
+    520: {
+      slidesPerView: 1.8,
       spaceBetween: 16,
     },
     // when window width is >= 640px

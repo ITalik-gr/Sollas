@@ -90,6 +90,11 @@
       position: absolute;
       top: 47px;
       right: 52px;
+      @include Screen-1340 {
+        top: 37px;
+        right: auto;
+        left: 32px;
+      }
       @include Screen-768 {
         top: 24px;
         left: 32px;
@@ -113,10 +118,9 @@
         margin-top: 80px;
       }
       @include Screen-992 {
-        margin-top: 0px;
+        margin-top: 70px;
       }
       @include Screen-768 {
-        margin-top: 50px;
         font-size: 16px;
         text-wrap: pretty;
       }

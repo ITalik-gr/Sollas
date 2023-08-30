@@ -70,6 +70,9 @@
       @include Screen-768 {
         margin-bottom: 12px;
       }
+      @include Screen-576 {
+        max-width: 250px;
+      }
     }
     &__descr {
       color: #BEBEBE;
