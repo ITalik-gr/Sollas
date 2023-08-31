@@ -1,7 +1,7 @@
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
     accordionImage = document.querySelectorAll('.faq-accordion-image svg path'),
-    workCardImage = document.querySelectorAll('.work-card__image img')[3],
+    workCardImage = document.querySelectorAll('.work-card__image img')[0],
     workCard = document.querySelectorAll('.work-card');
     
     
@@ -39,14 +39,10 @@ accordionNav.forEach((item, i) => {
 
 function resizeWorkCard() {
   let h = workCardImage.height;
-  
+  console.log('resize')
   workCard.forEach((item) => {
-    console.log(h)
     if(h == 0) {
-      item.style.height = `${350}px`;
-      setTimeout(() => {
-        item.style.height = `${workCardImage.height}px`;
-      }, 600);
+      return
     } else {
       item.style.height = `${workCardImage.height}px`;
     }
@@ -56,6 +52,13 @@ function resizeWorkCard() {
 if(workCardImage) {
   resizeWorkCard()
 }
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("HTML сторінка повністю завантажена");
+  setTimeout(() => {
+    resizeWorkCard()
+  }, 4800);
+});
+
 
 //? mobile menu
 
