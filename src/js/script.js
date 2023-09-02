@@ -35,31 +35,6 @@ accordionNav.forEach((item, i) => {
   })
 })
 
-//? css resize
-
-// function resizeWorkCard() {
-//   let h = workCardImage.height;
-//   console.log('resize')
-//   workCard.forEach((item) => {
-//     if(h == 0) {
-//       return
-//     } else {
-//       item.style.height = `${workCardImage.height}px`;
-//     }
-    
-//   })
-// }
-// if(workCardImage) {
-//   resizeWorkCard()
-// }
-// document.addEventListener("DOMContentLoaded", function() {
-//   console.log("HTML сторінка повністю завантажена");
-//   setTimeout(() => {
-//     resizeWorkCard()
-//   }, 4800);
-// });
-
-
 //? mobile menu
 
 const menu = document.querySelector('.menu'),
@@ -84,7 +59,7 @@ menuClose.addEventListener('click', () => {
 
 //? Typing animation
 var typed = new Typed('.typing', {
-  strings: ['web', 'app', 'SaaS'],
+  strings: ['app', 'web app', 'SaaS'],
   loop: true,
   typeSpeed: 100,
   backSpeed: 150,
@@ -128,14 +103,7 @@ const swiper = new Swiper('.facts-slider', {
   }
 });
 
-const swiperPricing = new Swiper('.pricing-feedback', {
-  spaceBetween: 1,
-  slidesPerView: 3,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-});
+// 
 
 
 // Scroll
@@ -154,3 +122,7 @@ for (let anchor of anchors) {
     })
   })
 }
+
+
+
+

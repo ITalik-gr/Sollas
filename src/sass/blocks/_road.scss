@@ -1,13 +1,8 @@
 .road {
-  margin-bottom: 130px;
-  @include Screen-768 {
-    background: #111;
-    margin-bottom: 0px;
-  }
+  background-color: #111;
   &-wrap {
     border-radius: 24px;
-    background: #111;
-    padding: 94px 50px 86px;
+    padding: 177px 50px 175px 86px;
     display: flex;
     justify-content: space-between;
     @include Screen-992 {

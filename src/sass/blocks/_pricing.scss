@@ -4,7 +4,7 @@
   color: #FFF;
   overflow: hidden;
   @include Screen-992 {
-    padding: 40px 0 48px 0;
+    padding: 40px 0 0px 0;
   }
   &-title {
     line-height: 114%; /* 82.08px */
@@ -62,7 +62,7 @@
     }
     @include Screen-576 {
       padding: 24px 16px;
-      height: 550px;
+      height: 586px;
       &:first-child {
         height: 502px;
       }
@@ -156,7 +156,7 @@
       width: 100%;
       margin-bottom: 20px;
       @include Screen-576 {
-
+        margin-bottom: 16px;
       }
       &:hover {
         background: #FFF;
@@ -193,6 +193,13 @@
     align-items: center;
     max-width: 886px;
     width: 100%;
+    @include Screen-992 {
+      max-width: 716px;
+    }
+    @include Screen-768 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     @include Screen-576 {
       padding: 20px 16px;
       flex-direction: column;
@@ -206,12 +213,16 @@
     &__block {
       display: flex;
       align-items: center;
+      @include Screen-768 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &__image {
       margin-right: 32px;
-      @include Screen-576 {
-        margin-right: 0;
+      @include Screen-768 {
         margin-bottom: 32px;
+        margin-right: 0;
       }
     }
     &__text {
@@ -234,6 +245,13 @@
       line-height: 24px;
       letter-spacing: -0.18px;
       max-width: 555px;
+      @include Screen-992 {
+        max-width: 405px;
+      }
+      @include Screen-768 {
+        margin-bottom: 20px;
+        max-width: 520px;
+      }
       @include Screen-576 {
         font-size: 16px;
       }
@@ -243,6 +261,9 @@
       font-size: 20px;
       line-height: 30px; /* 150% */
       letter-spacing: -0.2px;
+      &:hover {
+        color: #FFF;
+      }
     }
   }
 
@@ -252,7 +273,12 @@
     overflow: hidden;
     position: relative;
     width: 115.4%;
-    transform: translateX(-6.9%)!important;
+    transform: translateX(-5.9%)!important;
+    @include Screen-768 {
+      width: 100%;
+      transform: translateX(0)!important;
+      padding: 0 15px;
+    }
     &::after {
       content: '';
       height: 105%;
@@ -269,7 +295,17 @@
       padding: 36px 20px 61px 24px;
       max-width: 525px;
       max-height: 237px;
-      width: 100%;
+      min-width: 525px;
+      margin-right: 32px;
+      animation: slide 60s linear infinite;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include Screen-576 {
+        padding: 24px 20px 64px;
+        min-width: 282px;
+        margin-right: 10px;
+      }
       &__descr {
         color: #FFF;
         font-size: 20px;
@@ -278,12 +314,20 @@
         letter-spacing: -0.6px;
         margin-bottom: 32px;
         max-width: 436px;
+        @include Screen-576 {
+          font-size: 16px;
+          margin-bottom: 39px;
+        }
       }
       &__name {
         color: rgba(255, 255, 255, 0.6);
         font-size: 20px;
         line-height: normal;
         letter-spacing: -0.6px;
+        @include Screen-576 {
+          font-size: 16px;
+          max-width: 242px;
+        }
         span {
           display: block;
           font-weight: 500;
@@ -300,5 +344,14 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+      transform: translate3d(0, 0, 0);
+  }
+  100% {
+      transform: translate3d(-1500px, 0, 0); /* The image width */
   }
 }
