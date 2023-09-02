@@ -8,6 +8,7 @@
   }
   &-title {
     margin-bottom: 54px;
+    font-weight: 500;
     @include Screen-992 {
       margin-bottom: 34px;
     }

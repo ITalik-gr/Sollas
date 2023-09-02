@@ -9,6 +9,7 @@
     line-height: 114%; /* 82.08px */
     letter-spacing: -2.16px;
     margin-bottom: 80px;
+    font-weight: 500;
     color: #FFF;
     text-align: center;
     @include Screen-992 {
@@ -22,8 +23,8 @@
   }
   &-wrap {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 110px;
+    justify-content: center;
+    margin-bottom: 32px;
     @include Screen-1200 {
       flex-wrap: wrap;
     }
@@ -36,25 +37,22 @@
   
   &-card {
     padding: 36px 32px 32px 32px;
-    border-radius: 24px;
+    border-radius: 8px;
     background: #242424;
     color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 605px;
-    height: 605px;
+    max-height: 657px;
+    height: 657px;
     max-width: 426px;
     width: 100%;
-    margin-right: 20px;
+    margin-right: 32px;
     @include Screen-1200 {
       max-width: 422px;
       margin-bottom: 36px;
       &:last-child {
         margin-bottom: 0;
-      }
-      &:nth-child(2) {
-        margin-right: 0;
       }
     }
     @include Screen-992 {
@@ -70,41 +68,6 @@
     }
     &:last-child {
       margin-right: 0;
-    }
-    &--active {
-      border: 2px solid rgba(251, 123, 84, 0.55);
-    }
-    &__contact {
-      max-height: 384px;
-      margin-bottom: 12px;
-      @include Screen-1200 {
-        max-width: none;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        max-height: 218px;
-        padding: 32px;
-        &-btn {
-          max-width: 360px;
-        }
-        &-title {
-          font-size: 38px;
-        }
-        .pricing-card__descr {
-          max-width: 350px;
-        }
-      }
-      @include Screen-992 {
-        flex-direction: column;
-        max-height: 340px;
-      }
-      @include Screen-576 {
-        max-height: 306px;
-        margin-bottom: 0;
-        padding: 24px 16px;
-      }
     }
     &__name {
       font-size: 20px;
@@ -122,6 +85,7 @@
     &__price {
       color: #FFF;
       font-size: 52px;
+      font-weight: 500;
       line-height: normal;
       letter-spacing: -0.78px;
       @include Screen-576 {
@@ -173,6 +137,10 @@
       }
     }
 
+    &__buttons {
+      text-align: center;
+    }
+
     &__btn {
       color: #FFF;
       font-size: 20px;
@@ -185,6 +153,7 @@
       cursor: pointer;
       height: 64px;
       width: 100%;
+      margin-bottom: 20px;
       @include Screen-576 {
 
       }
@@ -197,15 +166,28 @@
         color: #111;
       }
     }
+
+    &__call {
+      color: #FFF;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px; /* 150% */
+      letter-spacing: -0.2px;
+    }
   }
 
-  &-info {
-    border-radius: 24px;
+
+
+  &-info { // карточка внизу прайсу
+    border-radius: 8px;
     background: #242424;
     padding: 24px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 869px;
+    max-width: 886px;
+    width: 100%;
     @include Screen-576 {
       padding: 20px 16px;
       flex-direction: column;
@@ -214,6 +196,11 @@
     &-wrap {
       display: flex;
       justify-content: center;
+      margin-bottom: 136px;
+    }
+    &__block {
+      display: flex;
+      align-items: center;
     }
     &__image {
       margin-right: 32px;
@@ -241,9 +228,59 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.18px;
+      max-width: 555px;
       @include Screen-576 {
         font-size: 16px;
       }
+    }
+    &__btn {
+      color: #FFF;
+      font-size: 20px;
+      line-height: 30px; /* 150% */
+      letter-spacing: -0.2px;
+    }
+  }
+
+
+  &-feedback { // карточки внизу прокручуються
+    display: flex;
+    overflow: hidden;
+    &-card {
+      border-radius: 8px;
+      background: #242424;
+      padding: 36px 20px 61px 24px;
+      max-width: 525px;
+      max-height: 237px;
+      width: 100%;
+      &__descr {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.6px;
+        margin-bottom: 32px;
+        max-width: 436px;
+      }
+      &__name {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: -0.6px;
+        span {
+          display: block;
+          font-weight: 500;
+        }
+      }
+      &:first-child {
+        .pricing-feedback-card__descr {
+          max-width: 412px;
+        }
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
     }
   }
 }

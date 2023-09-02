@@ -59,10 +59,10 @@
     &__number {
       color:  #111;
       font-size: 64px;
-      font-weight: 600;
       line-height: 135%; 
       letter-spacing: -0.32px;
       margin-bottom: 154px;
+      font-weight: 500;
       @include Screen-1200 {
         margin-bottom: 114px;
       }
@@ -110,9 +110,9 @@
 
     }
     &:nth-child(2) {
-      .facts-card__descr {
-        max-width: 210px;
-      }
+      // .facts-card__descr {
+      //   max-width: 210px;
+      // }
       
     }
     &:nth-child(3) {

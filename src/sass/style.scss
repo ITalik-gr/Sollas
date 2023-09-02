@@ -214,7 +214,7 @@ p {
 // }
 
 
-// @import 'blocks/header';
+@import 'blocks/header';
 @import 'blocks/facts';
 @import 'blocks/work';
 @import 'blocks/feedback';
@@ -224,7 +224,6 @@ p {
 // @import 'blocks/footer';
 @import 'blocks/road';
 // @import 'blocks/case';
-
 @import 'blocks/career';
 @import 'blocks/privacy';
 @import 'blocks/ideas';

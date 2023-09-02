@@ -128,6 +128,15 @@ const swiper = new Swiper('.facts-slider', {
   }
 });
 
+const swiperPricing = new Swiper('.pricing-feedback', {
+  spaceBetween: 20,
+  slidesPerView: 3,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+});
+
 
 // Scroll
 
