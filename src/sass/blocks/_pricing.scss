@@ -1,7 +1,8 @@
 .pricing {
   background-color: #111;
-  padding: 76px 0 110px 0;
+  padding: 76px 0 0px 0;
   color: #FFF;
+  overflow: hidden;
   @include Screen-992 {
     padding: 40px 0 48px 0;
   }
@@ -174,6 +175,10 @@
       font-weight: 600;
       line-height: 30px; /* 150% */
       letter-spacing: -0.2px;
+      transition: .3s all;
+      &:hover {
+        color: rgba(255, 255, 255, 0.789);
+      }
     }
   }
 
@@ -245,6 +250,19 @@
   &-feedback { // карточки внизу прокручуються
     display: flex;
     overflow: hidden;
+    position: relative;
+    width: 115.4%;
+    transform: translateX(-6.9%)!important;
+    &::after {
+      content: '';
+      height: 105%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.62) 100%);
+      z-index: 2;
+    }
     &-card {
       border-radius: 8px;
       background: #242424;

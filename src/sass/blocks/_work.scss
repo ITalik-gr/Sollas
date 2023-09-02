@@ -36,70 +36,48 @@
   &-card {
     max-width: 49.5%;
     width: 100%;
-    height: 500px;
+    height: 100%;
+    max-height: 100%;
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 16px;
     overflow: hidden;
     margin-bottom: 20px;
     margin-right: 10px;
-    border-radius: 24px;
+    border-radius: 8px;
+    position: relative;
     &:hover {
       .work-card__image {
         transform: scale(1.1);
       }
     }
     @include Screen-1200 {
-      max-width: 531px;
-      width: 100%;
-      height: 410px;
+
     }
     @include Screen-992 {
-      max-width: 511px;
-      height: 325px;
+      max-width: 90%;
+    }
+    @include Screen-768 {
+      max-width: 95%;
     }
     @include Screen-576 {
-      width: 280px;
-      margin-right: 0;
-      padding: 13px;
-      height: 290px;
+      max-width: 100%;
       &:hover {
         .work-card__image {
           transform: scale(1);
         }
       }
     }
-
-    &__1 {
-      // ...
-    }
-    &__2 {
-      margin-right: 0;
-    }
-    &__3 {
-
-    }
-    &__4 {
-      margin-right: 0;
-    }
     &__image {
       transition: .5s all;
-      position: absolute;
-      left: 0;
-      top: 0;
       width: 100%;
       height: 100%;
       img {
         max-width: 100%;
-        @include Screen-576 {
-          max-width: 280px;
-          max-height: 277px;
-          height: 100%;
-          width: 100%;
-          // object-fit: fill;
-        }
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     &-bottom {
@@ -107,8 +85,16 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      right: 16px;
+      max-width: 95%;
       @include Screen-576 {
         justify-content: center;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
       }
     }
 
@@ -123,8 +109,10 @@
       padding: 12px;
       display: flex;
       align-items: center;
-      @include Screen-992 {
+      @include Screen-1200 {
         font-size: 16px;
+      }
+      @include Screen-992 {
         padding: 10px;
       }
       @include Screen-576 {

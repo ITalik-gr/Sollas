@@ -37,27 +37,27 @@ accordionNav.forEach((item, i) => {
 
 //? css resize
 
-function resizeWorkCard() {
-  let h = workCardImage.height;
-  console.log('resize')
-  workCard.forEach((item) => {
-    if(h == 0) {
-      return
-    } else {
-      item.style.height = `${workCardImage.height}px`;
-    }
+// function resizeWorkCard() {
+//   let h = workCardImage.height;
+//   console.log('resize')
+//   workCard.forEach((item) => {
+//     if(h == 0) {
+//       return
+//     } else {
+//       item.style.height = `${workCardImage.height}px`;
+//     }
     
-  })
-}
-if(workCardImage) {
-  resizeWorkCard()
-}
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("HTML сторінка повністю завантажена");
-  setTimeout(() => {
-    resizeWorkCard()
-  }, 4800);
-});
+//   })
+// }
+// if(workCardImage) {
+//   resizeWorkCard()
+// }
+// document.addEventListener("DOMContentLoaded", function() {
+//   console.log("HTML сторінка повністю завантажена");
+//   setTimeout(() => {
+//     resizeWorkCard()
+//   }, 4800);
+// });
 
 
 //? mobile menu
@@ -129,7 +129,7 @@ const swiper = new Swiper('.facts-slider', {
 });
 
 const swiperPricing = new Swiper('.pricing-feedback', {
-  spaceBetween: 20,
+  spaceBetween: 1,
   slidesPerView: 3,
   loop: true,
   autoplay: {
