@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>http://sollas.co/idea.html</loc>
+  <loc>http://sollas.co/</loc>
 </url>
 <url>
-  <loc>http://sollas.co/</loc>
+  <loc>http://sollas.co/idea.html</loc>
 </url>
 <url>
   <loc>http://sollas.co/careers.html</loc>
@@ -23,12 +23,6 @@
 </url>
 <url>
   <loc>http://sollas.co/privacyPolicy.html</loc>
-</url>
-<url>
-  <loc>http://sollas.co/#feedback</loc>
-</url>
-<url>
-  <loc>http://sollas.co/#works</loc>
 </url>
 <url>
   <loc></loc>
