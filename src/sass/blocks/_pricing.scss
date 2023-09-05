@@ -70,12 +70,33 @@
     &:last-child {
       margin-right: 0;
     }
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    &__spot {
+      color: #FD6666;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.08px;
+      svg {
+        margin-right: 6px;
+      }
+      @include Screen-576 {
+        font-size: 14px;
+        svg {
+          display: none;
+        }
+      }
+    }
     &__name {
       font-size: 20px;
       font-weight: 500;
       line-height: normal;
       letter-spacing: -0.1px;
-      margin-bottom: 12px;
       @include Screen-1200 {
         font-size: 19px;
       }
@@ -272,40 +293,119 @@
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 115.4%;
-    transform: translateX(-5.9%)!important;
-    @include Screen-768 {
-      width: 100%;
-      transform: translateX(0)!important;
-      padding: 0 15px;
-    }
+    width: 20000px;
     &::after {
       content: '';
-      height: 105%;
+      height: 179px;
       width: 100%;
       position: absolute;
       left: 0;
       bottom: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.62) 100%);
+      background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, #111 100%);
       z-index: 2;
     }
-    &-card {
+    @include Screen-768 {
+      padding: 0 15px;
+      &::after {
+        height: 149px;
+      }
+    }
+    &-card {  
       border-radius: 8px;
       background: #242424;
-      padding: 36px 20px 61px 24px;
-      max-width: 525px;
-      max-height: 237px;
-      min-width: 525px;
+      width: 525px;
+      height: 340px;
+      padding: 30px 24px;
       margin-right: 32px;
       animation: slide 60s linear infinite;
+      @include Screen-768 {
+        padding: 28px 20px;
+        width: 282px;
+        height: 343px;
+        margin-right: 10px;
+      }
       &:last-child {
         margin-right: 0;
       }
-      @include Screen-576 {
-        padding: 24px 20px 64px;
-        min-width: 282px;
-        margin-right: 10px;
+      &__main {
+        display: flex;
+        justify-content: space-between;
+        padding: 46px 24px;
+        @include Screen-768 {
+          padding: 24px 20px;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        &__block {
+          @include Screen-768 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 66px;
+          }
+        }
+        &__logo {
+          img {
+            max-width: 152px;
+            margin-bottom: 15px;
+            @include Screen-768 {
+              max-width: 97px;
+              margin-bottom: 0;
+            }
+          }
+        }
+        &__descr {
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 20px;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.6px;
+          @include Screen-768 {
+            font-size: 14px;
+          }
+        }
+        &__link {
+          color: #FFF;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.6px;
+          &:hover {
+            color: #FFF;
+          }
+          svg {
+            margin-left: 16px;
+          }
+          @include Screen-768 {
+            font-size: 16px;
+            svg {
+              margin-left: 8px;
+              width: 20px;
+            }
+          }
+        }
       }
+
+      &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        @include Screen-768 {
+          margin-bottom: 27px;
+        }
+      }
+      &__logo {
+        img {
+          max-width: 62px;
+        }
+      }
+      &__link {
+        svg {
+
+        }
+      }
+
       &__descr {
         color: #FFF;
         font-size: 20px;
@@ -314,9 +414,22 @@
         letter-spacing: -0.6px;
         margin-bottom: 32px;
         max-width: 436px;
-        @include Screen-576 {
+        @include Screen-768 {
           font-size: 16px;
-          margin-bottom: 39px;
+          margin-bottom: 33px;
+          height: 66px;
+        }
+      }
+      &__user {
+        display: flex;
+      }
+      &__image {
+        margin-right: 16px;
+        @include Screen-768 {
+          margin-right: 12px;
+        }
+        img {
+          max-width: 50px;
         }
       }
       &__name {
@@ -324,26 +437,21 @@
         font-size: 20px;
         line-height: normal;
         letter-spacing: -0.6px;
-        @include Screen-576 {
+        @include Screen-768 {
           font-size: 16px;
-          max-width: 242px;
         }
         span {
           display: block;
           font-weight: 500;
         }
       }
-      &:first-child {
+      &:nth-child(2) {
         .pricing-feedback-card__descr {
-          max-width: 412px;
+          max-width: 387px;
         }
       }
     }
 
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-    }
   }
 }
 

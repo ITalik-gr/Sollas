@@ -39,7 +39,17 @@
 </head>
 <body>
 
-  <nav class="nav nav-white">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3K4V3X2XT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y3K4V3X2XT');
+</script>
+
+<nav class="nav nav-white">
     <div class="container">
         <div class="nav-wrap">
             <a href="/" class="nav-logo">
@@ -161,7 +171,9 @@
             </div>
           </div>
 
-          <button disabled class="idea-btn" type="submit">Send Request</button>
+          <button onclick="gtag('event', 'click', {
+            'event_category': 'Send Idea'
+          });" disabled class="idea-btn" type="submit">Send Request</button>
         </form>
 
         <div class="idea-send-email__wrap">

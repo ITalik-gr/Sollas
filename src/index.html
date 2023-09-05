@@ -93,7 +93,10 @@
                     <ul class="nav-list">
                         <li class="nav-list__item"><a href="#feedback">Who is it for</a></li>
                         <li class="nav-list__item"><a href="#works">Cases</a></li>
-                        <li class="nav-list__item"><a class="nav-list__contact" href="idea.html">Contact Us 
+                        <li class="nav-list__item"><a class="nav-list__contact" onclick="gtag('event', 'click', {
+                            'event_category': 'Link Click',
+                            'event_label': 'Idea page'
+                          });"  href="idea.html">Contact Us 
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16666M15.8337 10L10.0003 15.8333" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -223,7 +226,10 @@
             <ul class="menu-list">
                 <li class="menu-list__item"><a href="#feedback">Who is it for</a></li>
                 <li class="menu-list__item"><a href="careers.html">Careers</a></li>
-                <li class="menu-list__item"><a href="idea.html">Contact Us</a></li>
+                <li class="menu-list__item"><a onclick="gtag('event', 'click', {
+                    'event_category': 'Link Click',
+                    'event_label': 'Idea page'
+                  });" href="idea.html">Contact Us</a></li>
             </ul>
         </div>
 
@@ -587,9 +593,18 @@
             <div class="pricing-wrap">
                 <div data-aos-duration="1000" data-aos-once="true" data-aos="fade-up" class="pricing-card">
                     <div class="pricing-card__block">
-                        <div class="pricing-card__name">
-                            1 Design Sprint / 7 days
+                        <div class="pricing-card__nav">
+                            <div class="pricing-card__name">
+                                1 Design Sprint / 7 days
+                            </div>
+                            <div class="pricing-card__spot">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <path d="M7.50033 15.0833H2.91699M5.41699 10.5H1.66699M7.50033 5.91667H3.33366M14.167 3L8.66996 10.6958C8.42666 11.0365 8.30501 11.2068 8.31027 11.3488C8.31486 11.4724 8.37414 11.5876 8.47207 11.6632C8.58456 11.75 8.79386 11.75 9.21245 11.75H13.3337L12.5003 18L17.9974 10.3042C18.2407 9.96353 18.3623 9.79322 18.357 9.65123C18.3525 9.5276 18.2932 9.4124 18.1952 9.33682C18.0828 9.25 17.8735 9.25 17.4549 9.25H13.3337L14.167 3Z" stroke="#FD6666" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  1 Spot left
+                            </div>
                         </div>
+
                         <div class="pricing-card__price">
                             $2,990
                         </div>
@@ -605,7 +620,12 @@
                     </div>
 
                     <div class="pricing-card__buttons">
-                        <a href="idea.html" class="pricing-card__btn pricing-card__btn--active btn">
+                        <a onclick="ga('send', {
+                            hitType: 'event',
+                            eventCategory: 'click',
+                            eventAction: 'to form page',
+                          });" 
+                          href="idea.html" class="pricing-card__btn pricing-card__btn--active btn">
                             <span class="btn-text-1">Get Started</span>
                             <span class="btn-text-2">Let’s Go</span>
                         </a>
@@ -615,8 +635,16 @@
 
                 <div data-aos-duration="1000" data-aos-once="true" data-aos="fade-up" class="pricing-card">
                     <div class="pricing-card__block">
-                        <div class="pricing-card__name">
-                            2 Design Sprints / 14 days
+                        <div class="pricing-card__nav">
+                            <div class="pricing-card__name">
+                                2 Design Sprints / 14 days
+                            </div>
+                            <div class="pricing-card__spot">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <path d="M7.50033 15.0833H2.91699M5.41699 10.5H1.66699M7.50033 5.91667H3.33366M14.167 3L8.66996 10.6958C8.42666 11.0365 8.30501 11.2068 8.31027 11.3488C8.31486 11.4724 8.37414 11.5876 8.47207 11.6632C8.58456 11.75 8.79386 11.75 9.21245 11.75H13.3337L12.5003 18L17.9974 10.3042C18.2407 9.96353 18.3623 9.79322 18.357 9.65123C18.3525 9.5276 18.2932 9.4124 18.1952 9.33682C18.0828 9.25 17.8735 9.25 17.4549 9.25H13.3337L14.167 3Z" stroke="#FD6666" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  1 Spot left
+                            </div>
                         </div>
                         <div class="pricing-card__price">
                             $5,980+
@@ -635,7 +663,10 @@
                     </div>
 
                     <div class="pricing-card__buttons">
-                        <a href="idea.html" class="pricing-card__btn pricing-card__btn--active btn">
+                        <a onclick="gtag('event', 'click', {
+                            'event_category': 'Link Click',
+                            'event_label': 'Idea page'
+                          });"  href="idea.html" class="pricing-card__btn pricing-card__btn--active btn">
                             <span class="btn-text-1">Get Started</span>
                             <span class="btn-text-2">Let’s Go</span>
                         </a>
@@ -668,95 +699,189 @@
         </div>
 
 
-                <div id="marquee" class="pricing-feedback">
-
-                        <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
-                                Sollas delivered their tasks on time and ahead of schedule
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Kristy C.</span>
-                            <span>Founder, Ooma Life</span>
-                            </div>
-                        </div>
+                <div class="pricing-feedback">
                     
+                        <div class="pricing-feedback-card pricing-feedback-card__main">
+                            <div class="pricing-feedback-card__main__block">
+                                <a href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA" class="pricing-feedback-card__main__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch">
+                                </a>
+                                <div class="pricing-feedback-card__main__descr">
+                                    5/5 rating
+                                </div>
+                            </div>
+                            <a href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA" class="pricing-feedback-card__main__link">All reviews 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>
+
+                        </div>
+
                         <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2222015">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="pricing-feedback-card__descr">
+                                Sollas delivered their tasks on time and ahead of schedule.
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user-1.png" alt="Founder, Ooma Life">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Kristy C.</span>
+                                    <span>Founder, Ooma Life</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pricing-feedback-card">
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2216956">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="pricing-feedback-card__descr">
                                 What stood out most about Sollas was their remarkable speed and seamless collaboration.
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Jason Curry</span>
-                            <span>Founder & CEO, Comigo</span>
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user.webp" alt="Founder & CEO, Comigo">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Jason Curry</span>
+                                    <span>Founder & CEO, Comigo</span>
+                                </div>
                             </div>
                         </div>
 
                         <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2220527">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="pricing-feedback-card__descr">
                                 I really like how things looked after giving a brief description of the concept our team has in mind.
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user-2.png" alt="Founder, Answerly">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Brian Wong Jun han</span>
+                                    <span>Founder, Answerly</span>
+                                </div>
                             </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Brian Wong Jun han</span>
-                            <span>Founder, Answerly</span>
+                        </div>
+
+                        <div class="pricing-feedback-card pricing-feedback-card__main">
+                            <div class="pricing-feedback-card__main__block">
+                                <a href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA" class="pricing-feedback-card__main__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch">
+                                </a>
+                                <div class="pricing-feedback-card__main__descr">
+                                    5/5 rating
+                                </div>
+                            </div>
+                            <a href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA" class="pricing-feedback-card__main__link">All reviews 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>
+
+                        </div>
+
+                        <div class="pricing-feedback-card">
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2222015">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="pricing-feedback-card__descr">
+                                Sollas delivered their tasks on time and ahead of schedule.
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user-1.png" alt="Founder, Ooma Life">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Kristy C.</span>
+                                    <span>Founder, Ooma Life</span>
+                                </div>
                             </div>
                         </div>
 
                         <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
-                                Sollas delivered their tasks on time and ahead of schedule
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2216956">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
                             </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Kristy C.</span>
-                            <span>Founder, Ooma Life</span>
-                            </div>
-                        </div>
-                    
-                        <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
+                            <p class="pricing-feedback-card__descr">
                                 What stood out most about Sollas was their remarkable speed and seamless collaboration.
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Jason Curry</span>
-                            <span>Founder & CEO, Comigo</span>
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user.webp" alt="Founder & CEO, Comigo">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Jason Curry</span>
+                                    <span>Founder & CEO, Comigo</span>
+                                </div>
                             </div>
                         </div>
 
                         <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
+                            <div class="pricing-feedback-card__nav">
+                                <div class="pricing-feedback-card__logo">
+                                    <img src="img/feedback-clutch.png" alt="Clutch logo">
+                                </div>
+                                <a target="_blank" class="pricing-feedback-card__link" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA#review-2220527">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M6 18L18 6M18 6H10M18 6V14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="pricing-feedback-card__descr">
                                 I really like how things looked after giving a brief description of the concept our team has in mind.
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Brian Wong Jun han</span>
-                            <span>Founder, Answerly</span>
-                            </div>
-                        </div>
-
-                        <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
-                                Sollas delivered their tasks on time and ahead of schedule
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Kristy C.</span>
-                            <span>Founder, Ooma Life</span>
-                            </div>
-                        </div>
-                    
-                        <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
-                                What stood out most about Sollas was their remarkable speed and seamless collaboration.
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Jason Curry</span>
-                            <span>Founder & CEO, Comigo</span>
-                            </div>
-                        </div>
-
-                        <div class="pricing-feedback-card">
-                            <div class="pricing-feedback-card__descr">
-                                I really like how things looked after giving a brief description of the concept our team has in mind.
-                            </div>
-                            <div class="pricing-feedback-card__name">
-                            <span>Brian Wong Jun han</span>
-                            <span>Founder, Answerly</span>
+                            </p>
+                            <div class="pricing-feedback-card__user">
+                                <div class="pricing-feedback-card__image">
+                                    <img src="img/feedback-user-2.png" alt="Founder, Answerly">
+                                </div>
+                                <div class="pricing-feedback-card__name">
+                                    <span>Brian Wong Jun han</span>
+                                    <span>Founder, Answerly</span>
+                                </div>
                             </div>
                         </div>
                                     
@@ -896,7 +1021,10 @@
                 <div class="contact-us-title">
                     Prepare to be amazed by how swiftly your ideas can come to life once you've made your decision.
                 </div>
-                <a  href="idea.html" class="contact-us-btn btn">
+                <a onclick="gtag('event', 'click', {
+                    'event_category': 'Link Click',
+                    'event_label': 'Idea page'
+                  });"  href="idea.html" class="contact-us-btn btn">
                     <span class="btn-text-1">Contact Us</span>
                     <span class="btn-text-2">Let’s talk</span>
                 </a>
@@ -928,7 +1056,7 @@
                     </a>
 
                     <ul class="footer-list">
-                        <li class="footer-list__item"><a href="#feedback">Who is it for</a></li>
+                        <li class="footer-list__item"><a class="scroll" href="#feedback">Who is it for</a></li>
                         <li class="footer-list__item"><a href="careers.html">Careers</a></li>
                         <li class="footer-list__item"><a href="privacyPolicy.html">Privacy Policy</a></li>
                     </ul>

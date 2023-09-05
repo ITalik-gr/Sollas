@@ -111,6 +111,9 @@ const swiper = new Swiper('.facts-slider', {
 const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
+  if(anchor.getAttribute('href')[0] !== '#') {
+    continue;
+  }
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
 
