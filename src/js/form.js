@@ -74,7 +74,7 @@ async function sendMail(e) {
   })
 
   try {
-    const response = await axios.post("https://sollas-server-988fdabdb96f.herokuapp.com/send-email", {
+    const response = await axios.post("https://sollas-server.onrender.com/send-email", {
       name: inputName.value,
       email: inputEmail.value,
       descr: inputDescr.value.length > 0 ? inputDescr.value : 'none',
