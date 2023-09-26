@@ -1,0 +1,73 @@
+.how {
+  &-wrap {
+    max-width: 600px;
+    position: relative;
+  }
+  &-title {
+    margin-bottom: 116px;
+  }
+
+  &-left {
+    // position: relative;
+  }
+  &-line {
+    position: absolute;
+    right: -60%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FFF 40.62%, rgba(255, 255, 255, 0.00) 100%);
+    opacity: .3;
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      opacity: .7;
+    }
+    &__star {
+      &_1 {
+        top: 45px;
+      }
+      &_2 {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      } 
+      &_3 {
+        bottom: 45px;
+      }
+    }
+  }
+
+  &-card {
+    margin-bottom: 91px;
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 114%; /* 34.2px */
+      letter-spacing: -0.9px;
+      margin-bottom: 24px;
+    }
+    &__descr {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 146.5%; /* 29.3px */
+      letter-spacing: -0.1px;
+      max-width: 358px;
+    }
+    &:nth-child(2) {
+      p {
+        max-width: 383px;
+      }
+    }
+    &:nth-child(3) {
+      max-width: 333px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

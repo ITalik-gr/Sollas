@@ -12,7 +12,6 @@
 }
 body {
     color: #FFF;
-    background: #080809;
 }
 ul {
     list-style-type: none;
@@ -84,20 +83,17 @@ p {
 
 .block {
     &-title {
-        color:  #111;
-        font-size: 72px;
+        color:  #FFF;
+        font-size: 52px;
         line-height: 114%;
-        letter-spacing: -2.16px;
+        letter-spacing: -1.56px;
         @include Screen-1200 {
-            font-size: 62px;
-        }
-        @include Screen-992 {
-            font-size: 56px;
-        }
-        @include Screen-768 {
             font-size: 42px;
         }
-        @include Screen-576 {
+        @include Screen-992 {
+            font-size: 36px;
+        }
+        @include Screen-768 {
             font-size: 32px;
         }
     }
@@ -105,18 +101,28 @@ p {
 
 .container {
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 0px 286px;
     max-width: 1440px;
+    @include Screen-1400 {
+        padding: 0 100px;
+    }
     &-2 {
-        padding: 0px 286px;
-        @include Screen-1400 {
-            padding: 0 100px;
+        padding: 0 64px;
+        @include Screen-768 {
+            padding: 0 20px;
         }
     }
     @include Screen-768 {
         padding: 0 20px;
     }
 
+}
+
+.main-page {
+    background: #080809;
+    // .container {
+    //     padding: 0 268px;
+    // }
 }
 
 .menu {
@@ -210,11 +216,18 @@ p {
     }
 }
 
+.star {
+    opacity: 0.5;
+    filter: blur(4px);
+}
 
 @import 'blocks/header';
 @import 'blocks/faq';
 @import 'blocks/contact-us';
 @import 'blocks/footer';
+@import 'blocks/how';
+
+
 @import 'blocks/case';
 @import 'blocks/career';
 @import 'blocks/privacy';
