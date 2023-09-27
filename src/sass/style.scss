@@ -103,7 +103,7 @@ p {
 .container {
     margin: 0 auto;
     padding: 0px 286px;
-    max-width: 1440px;
+    max-width: 868px;
     @include Screen-1400 {
         padding: 0 100px;
     }
@@ -227,6 +227,7 @@ p {
 @import 'blocks/facts';
 @import 'blocks/feedback';
 @import 'blocks/pricing';
+@import 'blocks/extra'; // add ons
 
 
 @import 'blocks/case';

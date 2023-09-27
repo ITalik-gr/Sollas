@@ -1,6 +1,5 @@
 .pricing {
-
-
+  margin-bottom: 33px;
   &-text {
     margin-bottom: 56px;
     &__wrap { // title + spot left
@@ -37,6 +36,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 57px;
   }
 
   &-card {
@@ -155,6 +156,31 @@
       &:hover {
         color: rgba(255, 255, 255, 0.698);
       }
+    }
+  }
+
+  &-lines {
+    position: relative;
+    padding: 65px 0;
+    display: flex;
+    justify-content: center;
+    &__1, &__2 {
+      display: block;
+      opacity: 0.3;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+    }
+    &__1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      height: 130px;
+      width: 1px;
+    }
+    &__2 {
+      height: 1px;
+      max-width: 868px;
+      width: 100%;
     }
   }
 }
