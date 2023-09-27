@@ -1,0 +1,50 @@
+.works {
+
+  &-title { 
+    margin-bottom: 64px;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-card {
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.151);
+    background: #111113;
+    padding: 24px 0 12px 0;
+    display: block;
+    max-width: 424px;
+    margin-bottom: 24px;
+    &__text {
+      padding: 0 24px;
+      margin-bottom: 19px;
+    }
+    &__name {
+      color: #FFF;
+      font-size: 22px;
+      line-height: normal;
+      letter-spacing: -0.33px;
+      margin-bottom: 8px;
+      margin-bottom: 8px;
+    }
+    &__descr {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.24px;
+    }
+
+    &__image {
+      padding: 0 12px;
+      max-width: 400px;
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+  }
+}
