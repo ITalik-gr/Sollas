@@ -2,7 +2,7 @@
 
 .nav {
   padding: 26px 0;
-  margin-bottom: 78px;
+  margin-bottom: 98px;
   @include Screen-576 {
     margin-bottom: 52px;
   }
@@ -108,7 +108,7 @@
 
 .header {
   overflow: hidden;
-  margin-bottom: 215px;
+  margin-bottom: 275px;
   &-wrap {
     display: flex;
     flex-direction: column;
