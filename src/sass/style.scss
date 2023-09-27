@@ -85,6 +85,7 @@ p {
     &-title {
         color:  #FFF;
         font-size: 52px;
+        font-weight: 500;
         line-height: 114%;
         letter-spacing: -1.56px;
         @include Screen-1200 {
@@ -120,9 +121,6 @@ p {
 
 .main-page {
     background: #080809;
-    // .container {
-    //     padding: 0 268px;
-    // }
 }
 
 .menu {
@@ -228,6 +226,7 @@ p {
 @import 'blocks/how';
 @import 'blocks/facts';
 @import 'blocks/feedback';
+@import 'blocks/pricing';
 
 
 @import 'blocks/case';

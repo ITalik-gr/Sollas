@@ -1,3 +1,71 @@
 .feedback {
-  
+  margin-bottom: 308px;
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      border-radius: 668px;
+      opacity: 0.1;
+      background: #ACFF79;
+      filter: blur(94px);
+      height: 289px;
+      width: 668px;
+      top: 49px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &-descr {
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 155.5%; /* 49.76px */
+    letter-spacing: -0.16px;
+    margin-bottom: 44px;
+    span {
+      color: $second-color;
+      font-weight: 500;
+    }
+  }
+
+  &-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__image {
+      max-width: 62px;
+      border-radius: 100%;
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    &__text {
+
+    }
+    &__name {
+      color: #FFF;
+      font-size: 18px;
+      line-height: 114%;
+      letter-spacing: -0.09px;
+      margin-bottom: 8px;
+    }
+    &__position {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 114%;
+      letter-spacing: -0.07px;
+    }
+  }
 }
