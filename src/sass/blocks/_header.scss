@@ -141,6 +141,7 @@
     line-height: 114%;
     letter-spacing: -2.31px;
     margin-bottom: 26px;
+    text-align: center;
     span {
       font-weight: 500;
       color: $second-color;
@@ -200,11 +201,30 @@
   &-line {
     position: absolute;
     top: 100px;
+    z-index: -1;
     &__1 {
       left: 0;
     }
     &__2 {
       right: 0;
+    }
+  }
+
+  &-star {
+    position: absolute;
+    &__1 {
+      top: 117px;
+      right: 117px;
+    }
+    &__2 {
+      left: 90px;
+      top: 445px;
+      .star-item-v {
+        height: 43px;
+      }
+      .star-item-h {
+        width: 43px;
+      }
     }
   }
 }
@@ -218,3 +238,5 @@
     transform: translateX(-100%);
   }
 }
+
+

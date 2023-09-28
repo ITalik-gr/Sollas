@@ -19,6 +19,7 @@ ul {
     padding: 0;
 }
 a {
+    text-decoration: none;
     &:hover {
         text-decoration: none;
     }
@@ -102,10 +103,10 @@ p {
 
 .container {
     margin: 0 auto;
-    padding: 0px 286px;
+    padding: 0px 20px;
     max-width: 868px;
     @include Screen-1400 {
-        padding: 0 100px;
+        // padding: 0 100px;
     }
     &-2 {
         padding: 0 64px;
@@ -114,10 +115,25 @@ p {
         }
     }
     @include Screen-768 {
-        padding: 0 20px;
+        // padding: 0 20px;
     }
 
 }
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      mix-blend-mode: color-dodge;
+      &-v {
+        position: absolute;
+      }
+      &-h {
+  
+      }
+    }
+  }
 
 .main-page {
     background: #080809;
@@ -214,10 +230,6 @@ p {
     }
 }
 
-.star {
-    opacity: 0.5;
-    filter: blur(4px);
-}
 
 @import 'blocks/header';
 @import 'blocks/faq';
