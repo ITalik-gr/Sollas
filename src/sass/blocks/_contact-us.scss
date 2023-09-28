@@ -1,6 +1,7 @@
 .contact-us {
   padding: 164px 0 0 0;
   margin-bottom: 187px;
+  position: relative;
   @include Screen-576 {
     padding: 38px 0 51px 0;
   }
@@ -49,6 +50,17 @@
     @include Screen-576 {
       max-width: 279px;
       height: 79px;
+    }
+  }
+
+  &-line {
+    position: absolute;
+    top: 5px;
+    &__1 {
+      left: 0;
+    }
+    &__2 {
+      right: 0;
     }
   }
 }
