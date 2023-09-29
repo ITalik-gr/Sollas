@@ -22,6 +22,7 @@
     max-width: 959px;
     @include Screen-992 {
       font-size: 44px;
+      max-width: 569px;
     }
     @include Screen-768 {
       font-size: 36px;
@@ -29,7 +30,7 @@
     @include Screen-576 {
       font-size: 28px;
       letter-spacing: -0.84px;
-      text-align: left;
+      // text-align: left;
       margin-bottom: 36px;
     }
   }

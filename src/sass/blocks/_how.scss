@@ -1,14 +1,20 @@
 .how {
   margin-bottom: 192px;
+  @include Screen-768 {
+    margin-bottom: 87px;
+  }
   &-wrap {
     position: relative;
   }
   &-title {
     margin-bottom: 116px;
+    @include Screen-768 {
+      margin-bottom: 60px;
+    }
   }
 
   &-left {
-    // position: relative;
+
   }
   &-line {
     position: absolute;
@@ -17,14 +23,8 @@
     width: 1px;
     height: 106%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.3) 40.62%, rgba(255, 255, 255, 0) 100%);
-    img {
-      // position: absolute;
-      // left: 50%;
-      // transform: translateX(-50%);
-      // z-index: 3;
-      // opacity: .7;
-      // width: 86px;
-      // height: 96px;
+    @include Screen-768 {
+      display: none;
     }
     &__star {
       left: calc(50% - 48px);
@@ -43,14 +43,25 @@
 
   &-card {
     margin-bottom: 91px;
+    @include Screen-768 {
+      margin-bottom: 48px;
+    }
     &__image {
       margin-bottom: 24px;
+      @include Screen-768 {
+        max-width: 46px;
+        margin-bottom: 20px;
+      }
     }
     &__title {
       font-size: 30px;
       line-height: 114%; /* 34.2px */
       letter-spacing: -0.9px;
       margin-bottom: 24px;
+      @include Screen-768 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
     }
     &__descr {
       color: rgba(255, 255, 255, 0.7);
@@ -59,6 +70,9 @@
       line-height: 146.5%; /* 29.3px */
       letter-spacing: -0.1px;
       max-width: 358px;
+      @include Screen-768 {
+        font-size: 16px;
+      }
     }
     &:nth-child(2) {
       p {

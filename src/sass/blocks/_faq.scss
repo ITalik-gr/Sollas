@@ -1,5 +1,8 @@
 .faq {
   margin-bottom: 277px;
+  @include Screen-992 {
+    margin-bottom: 140px;
+  }
   @include Screen-576 {
     padding: 64px 0;
   }
@@ -34,10 +37,6 @@
     margin-bottom: 16px;
     overflow: hidden;
     box-sizing: border-box;
-    @include Screen-992 {
-      width: 100%;
-      max-width: 730px;
-    }
     @include Screen-576 {
       margin-bottom: 32px;
     }

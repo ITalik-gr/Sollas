@@ -1,6 +1,12 @@
 .facts {
   margin-bottom: 433px;
   position: relative;
+  @include Screen-992 {
+    margin-bottom: 170px;
+  }
+  @include Screen-768 {
+    margin-bottom: 112px;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -11,6 +17,9 @@
     height: 829px;
     opacity: 0.3;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+    @include Screen-992 {
+      display: none;
+    }
   }
   &-wrap {
     display: flex;
@@ -35,13 +44,40 @@
     &::after {
       bottom: 0;
     }
+
+    @include Screen-992 {
+      flex-direction: column;
+      padding: 44px 0 44px 0;
+    }
+    @include Screen-768 {
+      align-items: flex-start;
+    }
   }
 
   &-left {
-
+    @include Screen-992 {
+      padding-bottom: 44px;
+      margin-bottom: 44px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        opacity: 0.3;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+        height: 1px;
+        width: 88vw;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1088px;
+        bottom: 0;
+      }
+    }
   }
   &-right {
 
+  }
+  &-left, &-right {
+    
   }
 
   &-title {
@@ -50,6 +86,10 @@
     line-height: 114%; /* 34.2px */
     letter-spacing: -0.9px;
     margin-bottom: 27px;
+    @include Screen-768 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
   &-descr {
     color: rgba(255, 255, 255, 0.8);
@@ -58,5 +98,8 @@
     line-height: 146.5%; /* 29.3px */
     letter-spacing: -0.1px;
     max-width: 358px;
+    @include Screen-768 {
+      font-size: 16px;
+    }
   }
 }

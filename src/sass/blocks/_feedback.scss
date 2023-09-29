@@ -1,11 +1,17 @@
 .feedback {
   margin-bottom: 308px;
+  @include Screen-992 {
+    margin-bottom: 160px;
+  }
   &-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    @include Screen-768 {
+      align-items: flex-start;
+    }
     &::before {
       position: absolute;
       content: '';
@@ -19,6 +25,11 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
+      @include Screen-768 {
+        width: 300px;
+        height: 310px;
+        top: -20px;
+      }
     }
   }
 
@@ -35,6 +46,20 @@
       color: $second-color;
       font-weight: 500;
     }
+    br {
+      display: none;
+    }
+    @include Screen-992 {
+      font-size: 27px;
+      max-width: 625px;
+    }
+    @include Screen-768 {
+      font-size: 18px;
+      text-align: left;
+      br {
+        display: block;
+      }
+    }
   }
 
   &-user {
@@ -43,10 +68,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    @include Screen-768 {
+      flex-direction: row;
+      text-align: left;
+    }
     &__image {
       max-width: 62px;
       border-radius: 100%;
       margin-bottom: 20px;
+      @include Screen-768 {
+        margin-right: 16px;
+        margin-bottom: 0;
+      }
       img {
         width: 100%;
       }
@@ -60,6 +93,9 @@
       line-height: 114%;
       letter-spacing: -0.09px;
       margin-bottom: 8px;
+      @include Screen-768 {
+        margin-bottom: 4px;
+      }
     }
     &__position {
       color: rgba(255, 255, 255, 0.8);

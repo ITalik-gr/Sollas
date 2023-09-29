@@ -14,12 +14,22 @@
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,.151);
     background: #111113;
-    padding: 24px 0 12px 0;
+    padding: 24px 12px 12px 12px;
     display: block;
     max-width: 424px;
     margin-bottom: 24px;
+    @include Screen-992 {
+      max-width: 330px;
+    }
+    &:hover {
+      .works-card__image {
+        img {
+          transform: scale(1.06);
+        }
+      }
+    }
     &__text {
-      padding: 0 24px;
+      padding: 0 12px;
       margin-bottom: 19px;
     }
     &__name {
@@ -39,11 +49,12 @@
     }
 
     &__image {
-      padding: 0 12px;
       max-width: 400px;
+      overflow: hidden;
+      border-radius: 20px;
       img {
-        border-radius: 8px;
         width: 100%;
+        transition: .3s all;
       }
     }
   }
