@@ -25,6 +25,9 @@
     letter-spacing: -0.08px;
     display: flex;
     align-items: center;
+    @include Screen-576 {
+      display: none;
+    }
     svg {
       margin-right: 6px;
     }

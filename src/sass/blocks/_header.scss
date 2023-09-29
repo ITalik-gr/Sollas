@@ -109,6 +109,7 @@
 .header {
   overflow: hidden;
   margin-bottom: 275px;
+  position: relative;
   @include Screen-992 {
     margin-bottom: 105px;
   }
@@ -133,6 +134,9 @@
     &__image {
       margin-right: 14px;
       max-width: 62px;
+      @include Screen-576 {
+        margin-right: 7px;
+      }
     }
     &__text {
       margin-left: 6px;
@@ -140,6 +144,9 @@
       font-size: 16px;
       font-style: normal;
       line-height: 135.5%;
+      @include Screen-576 {
+        font-size: 14px;
+      }
     }
   }
 
@@ -179,9 +186,15 @@
       font-size: 16px;
       margin-bottom: 24px;
     }
+    @include Screen-576 {
+      max-width: 280px;
+    }
   }
   &-btn {
-
+    @include Screen-576 {
+      width: 100%;
+      max-width: 290px;
+    }
   }
 
   &-scroll {

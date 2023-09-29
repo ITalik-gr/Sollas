@@ -1,12 +1,7 @@
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
-    accordionImage = document.querySelectorAll('.faq-accordion-image svg path'),
-    workCardImage = document.querySelectorAll('.work-card__image img')[0],
-    workCard = document.querySelectorAll('.work-card');
+    accordionImage = document.querySelectorAll('.faq-accordion-image svg path');
     
-    
-
-
 
 //? Accordion
 
@@ -57,53 +52,50 @@ menuClose.addEventListener('click', () => {
 })
 
 
-//? Typing animation
-var typed = new Typed('.typing', {
-  strings: ['app', 'web app', 'SaaS'],
-  loop: true,
-  typeSpeed: 100,
-  backSpeed: 150,
-  backDelay: 1900,
-  showCursor: false,
-});
-
 //? Scroll animation
-AOS.init();
+// AOS.init();
 
 //? swiper 
 
-const swiper = new Swiper('.facts-slider', {
-  spaceBetween: 20,
+const swiper = new Swiper('.extra-slider', {
+  spaceBetween: 10,
+  // slidesPerView: 1.5,
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1.1,
-      spaceBetween: 14,
     },
-    340: {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
+    400: {
+      slidesPerView: 1.3,
     },
-    380: {
-      slidesPerView: 1.34,
-      spaceBetween: 16,
+    500: {
+      slidesPerView: 1.7,
     },
-    440: {
-      slidesPerView: 1.5,
-      spaceBetween: 16,
+    576: {
+      slidesPerView: 1.9,
     },
-    520: {
-      slidesPerView: 1.8,
-      spaceBetween: 16,
-    },
-    // when window width is >= 640px
-    767: {
-      slidesPerView: 2,
-    }
   }
 });
 
-// 
+const swiperWorks = new Swiper('.works-slider', {
+  spaceBetween: 10,
+  // slidesPerView: 1.5,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+    },
+    400: {
+      slidesPerView: 1.3,
+    },
+    500: {
+      slidesPerView: 1.7,
+    },
+    576: {
+      slidesPerView: 1.9,
+    },
+  }
+});
+
+
 
 
 // Scroll

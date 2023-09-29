@@ -105,17 +105,11 @@ p {
     margin: 0 auto;
     padding: 0px 20px;
     max-width: 868px;
-    @include Screen-1400 {
-        // padding: 0 100px;
-    }
     &-2 {
         padding: 0 64px;
         @include Screen-768 {
             padding: 0 20px;
         }
-    }
-    @include Screen-768 {
-        // padding: 0 20px;
     }
 
 }

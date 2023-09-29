@@ -4,7 +4,7 @@
     margin-bottom: 140px;
   }
   @include Screen-576 {
-    padding: 64px 0;
+    margin-bottom: 162px;
   }
 
   &-title {
@@ -12,8 +12,8 @@
     @include Screen-992 {
       margin-bottom: 48px;
     }
-    @include Screen-576 {
-      font-size: 42px;
+    @include Screen-768 {
+      margin-bottom: 24px;
     }
   }
 
@@ -37,17 +37,19 @@
     margin-bottom: 16px;
     overflow: hidden;
     box-sizing: border-box;
-    @include Screen-576 {
-      margin-bottom: 32px;
+    @include Screen-768 {
+      padding: 24px 16px 16px 16px;
     }
     &:last-child {
       margin-bottom: 0;
     }
     &-nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       cursor: pointer;
+      @include Screen-768 {
+        margin-top: -5px;
+      }
     }
     &-body {
       height: auto;
@@ -65,7 +67,7 @@
       line-height: 145%; /* 29px */
       @include Screen-576 {
         font-size: 16px;
-        max-width: 240px;
+        max-width: 220px;
       }
     }
     &-image {
@@ -80,6 +82,9 @@
       max-width: 656px;
       width: 100%;
       padding-top: 16px;
+      @include Screen-768 {
+        font-size: 14px;
+      }
     }
 
     &--active {

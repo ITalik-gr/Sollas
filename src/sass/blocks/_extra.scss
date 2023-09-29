@@ -1,9 +1,18 @@
 .extra {
   margin-bottom: 192px;
+  overflow: hidden;
+  @include Screen-768 {
+    margin-bottom: 110px;
+  }
   &-text {
     display: flex;
     align-items: center;
     margin-bottom: 39px;
+  }
+  &-wrap {
+    @include Screen-768 {
+      display: none;
+    }
   }
   &-title {
 
@@ -11,6 +20,9 @@
   &-star {
     width: 96px;
     height: 96px;
+    @include Screen-768 {
+      display: none;
+    }
   }
   &-card {
     border: 1px solid rgba(255,255,255,.151);
@@ -23,12 +35,29 @@
     border-radius: 12px;
     background: #111113;
     margin-bottom: 24px;
+    @include Screen-768 {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 364px;
+      padding: 19px 16px 24px;
+    }
+    @include Screen-576 {
+      max-width: 264px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
     &__info {
       border-right: 1px solid rgba(255, 255, 255, 0.1);
       min-width: 254px;
+      @include Screen-768 {
+        min-width: auto;
+        width: 100%;
+        padding-bottom: 22px;
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
     }
     &__block {
       display: flex;
@@ -36,6 +65,11 @@
       align-items: center;
       padding-left: 32px;
       width: 100%;
+      @include Screen-768 {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: flex-start;
+      }
     }
     &__name {
       color: #FFF;
@@ -43,6 +77,10 @@
       line-height: normal;
       letter-spacing: -0.27px;
       margin-bottom: 4px;
+      @include Screen-768 {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
     }
     // 
     &__price {
@@ -50,14 +88,23 @@
       font-size: 52px;
       font-weight: 500;
       line-height: normal;
+      @include Screen-768 {
+        font-size: 42px;
+      }
       span {
         color: rgba(255, 255, 255, 0.4);
         font-weight: 500;
         font-size: 24px;
+        @include Screen-768 {
+          font-size: 20px;
+        }
       }
     }
 
     &__list {
+      @include Screen-768 {
+        margin-bottom: 30px;
+      }
       &-item {
         position: relative;
         padding-left: 17px;
@@ -67,6 +114,10 @@
         line-height: normal;
         letter-spacing: -0.27px;
         margin-bottom: 18px;
+        @include Screen-768 {
+          margin-bottom: 18px;
+          font-size: 15px;
+        }
         &:last-child {
           margin-bottom: 0;
         }
@@ -84,10 +135,22 @@
     }
 
     &__buttons {
-    
+      @include Screen-768 {
+        width: 100%;
+      }
     }
     &__btn {
       width: 180px;
+      @include Screen-768 {
+        width: 100%;
+      }
+    }
+  }
+
+  &-slider {
+    display: none;
+    @include Screen-768 {
+      display: flex;
     }
   }
 }
