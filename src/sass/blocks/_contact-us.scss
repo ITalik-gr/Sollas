@@ -2,7 +2,6 @@
   padding: 164px 0 0 0;
   margin-bottom: 187px;
   position: relative;
-  overflow: hidden;
   @include Screen-768 {
     padding: 74px 0 0 0;
   }
@@ -64,6 +63,12 @@
     z-index: -1;
     &__1 {
       left: 0;
+      @include Screen-768 {
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+      }
     }
     &__2 {
       right: 0;

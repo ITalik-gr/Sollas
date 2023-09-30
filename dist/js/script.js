@@ -64,8 +64,17 @@ const swiper = new Swiper('.extra-slider', {
     320: {
       slidesPerView: 1.1,
     },
-    400: {
+    340: {
+      slidesPerView: 1.17,
+    },
+    370: {
+      slidesPerView: 1.25,
+    },
+    390: {
       slidesPerView: 1.3,
+    },
+    450: {
+      slidesPerView: 1.48,
     },
     500: {
       slidesPerView: 1.7,

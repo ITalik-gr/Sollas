@@ -46,10 +46,9 @@
     &-nav {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       cursor: pointer;
-      @include Screen-768 {
-        margin-top: -5px;
-      }
+
     }
     &-body {
       height: auto;
@@ -65,6 +64,9 @@
       color: #FFF;
       font-size: 20px;
       line-height: 145%; /* 29px */
+      @include Screen-768 {
+        margin-top: -7px;
+      }
       @include Screen-576 {
         font-size: 16px;
         max-width: 220px;

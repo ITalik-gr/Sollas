@@ -67,8 +67,9 @@
     width: 100%;
     max-width: 424px;
     @include Screen-768 {
-      max-width: 280px;
+      max-width: 360px;
       padding: 19px 16px 20px;
+      box-sizing: border-box;
     }
     &:last-child {
       margin-left: 20px;
@@ -169,8 +170,16 @@
         padding: 16px;
         border: 1px solid rgba(255, 255, 255, 0.151);
         z-index: 4;
+        @include Screen-768 {
+          width: 187px;
+          left: auto;
+          right: 0;
+        }
         &--2 {
           width: 222px;
+          @include Screen-768 {
+            width: 170px;
+          }
         }
       }
       &-list {
@@ -179,7 +188,6 @@
       &-item {
 
       }
-
       &:hover {
         .pricing-card__more-block {
           display: block;
