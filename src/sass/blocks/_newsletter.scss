@@ -1,0 +1,105 @@
+.newsletter {
+  padding: 64px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @include Screen-576 {
+    padding: 72px 0;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Screen-992 {
+      flex-direction: column;
+    }
+  }
+  &-text {
+    margin-right: 112px;
+    @include Screen-992 {
+      margin-right: 0px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  }
+  &-title {
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 114%; /* 25.08px */
+    letter-spacing: -0.11px;
+    margin-bottom: 16px;
+  }
+  &-descr {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 114%; /* 15.96px */
+    letter-spacing: -0.07px;
+  }
+  &-form {
+    display: flex;
+    @include Screen-992 {
+      flex-direction: column;
+      max-width: 297px;
+      width: 100%;
+    }
+  }
+  &-input, .sc-gZMcBi {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(54, 54, 54, 0.74);
+    background: #080809;
+    color: #ffffffb3;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: -0.16px;
+    margin-right: 16px;
+    max-width: 297px;
+    width: 100%;
+    height: 52px;
+    box-sizing: border-box;
+    @include Screen-992 {
+      margin-bottom: 24px;
+      margin-right: 0;
+    }
+  }
+  &-btn {
+    border-radius: 8px;
+    border: 1px solid rgba(54, 54, 54, 0.74);
+    background: #080809;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: -0.16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 174px;
+    height: 52px;
+    box-sizing: border-box;
+    cursor: pointer;
+    @include Screen-992 {
+      max-width: 297px;
+      width: 100%;
+    }
+  }
+
+}
+
+.doCfh {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(54, 54, 54, 0.74);
+  background: #080809;
+  color: #ffffffb3;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: -0.16px;
+  margin-right: 16px;
+  max-width: 297px;
+  width: 100%;
+  height: 52px;
+  box-sizing: border-box;
+}
