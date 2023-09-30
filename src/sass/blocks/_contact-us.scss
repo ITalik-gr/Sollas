@@ -1,13 +1,11 @@
 .contact-us {
   padding: 164px 0 0 0;
-  margin-bottom: 183px;
   position: relative;
   @include Screen-768 {
     padding: 74px 0 0 0;
   }
   @include Screen-576 {
     padding: 38px 0 51px 0;
-    margin-bottom: 46px;
   }
   &-wrap {
     display: flex;
@@ -91,6 +89,9 @@
   &--main {
     .contact-us {
       margin-bottom: 183px;
+      @include Screen-576 {
+        margin-bottom: 46px;
+      }
     }
   }
 }
