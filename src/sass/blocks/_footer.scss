@@ -1,6 +1,9 @@
 .footer {
   padding: 46px 0;
-  background-color: #111;
+  background: #111;
+  &-main {
+    background-color: transparent!important;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;

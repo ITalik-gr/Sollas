@@ -1,6 +1,10 @@
 .contact-us {
-  background-color: #111;
-  padding: 50px 0 103px 0;
+  padding: 164px 0 163px 0;
+  position: relative;
+  background: #111;
+  @include Screen-768 {
+    padding: 74px 0 0 0;
+  }
   @include Screen-576 {
     padding: 38px 0 51px 0;
   }
@@ -14,20 +18,22 @@
     color: #FFF;
     text-align: center;
     font-size: 52px;
+    font-weight: 500;
     line-height: 114%; /* 59.28px */
     letter-spacing: -1.56px;
-    margin-bottom: 52px;
+    margin-bottom: 49px;
     max-width: 959px;
     @include Screen-992 {
       font-size: 44px;
+      max-width: 569px;
     }
     @include Screen-768 {
       font-size: 36px;
     }
     @include Screen-576 {
       font-size: 28px;
+      max-width: 280px;
       letter-spacing: -0.84px;
-      text-align: left;
       margin-bottom: 36px;
     }
   }
@@ -50,4 +56,49 @@
       height: 79px;
     }
   }
+
+  &-line {
+    position: absolute;
+    top: 5px;
+    z-index: -1;
+    &__1 {
+      left: 0;
+      @include Screen-768 {
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__2 {
+      right: 0;
+      @include Screen-768 {
+        display: none;
+      }
+    }
+  }
+
+  &-star {
+    position: absolute;
+    top: 62px;
+    left: calc(50% - 48px);
+    @include Screen-768 {
+      top: 0;
+    }
+  }
+
+  &--main {
+      margin-bottom: 183px;
+      background-color: transparent!important;
+      padding: 164px 0 0px 0!important;
+      @include Screen-768 {
+        padding: 74px 0 0 0;
+      }
+      @include Screen-576 {
+        padding: 38px 0 51px 0;
+      }
+      @include Screen-576 {
+        margin-bottom: 46px;
+      }
+    }
 }

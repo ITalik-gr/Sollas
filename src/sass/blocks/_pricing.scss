@@ -1,107 +1,92 @@
 .pricing {
-  background-color: #111;
-  padding: 76px 0 0px 0;
-  color: #FFF;
-  overflow: hidden;
-  @include Screen-992 {
-    padding: 40px 0 0px 0;
+  margin-bottom: 33px;
+  @include Screen-768 {
+    margin-bottom: 40px;
   }
-  &-title {
-    line-height: 114%; /* 82.08px */
-    letter-spacing: -2.16px;
-    margin-bottom: 80px;
-    font-weight: 500;
-    color: #FFF;
-    text-align: center;
-    @include Screen-992 {
-      margin-bottom: 38px;
-    }
-    @include Screen-576 {
-      margin-bottom: 24px;
-      max-width: 340px;
-      text-align: left;
-    }
-  }
-  &-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-    @include Screen-1200 {
-      flex-wrap: wrap;
-    }
-    @include Screen-992 {
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 29px;
-    }
-  }
-  
-  &-card {
-    padding: 36px 32px 32px 32px;
-    border-radius: 8px;
-    background: #242424;
-    color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-height: 657px;
-    height: 657px;
-    max-width: 426px;
-    width: 100%;
-    margin-right: 32px;
-    @include Screen-1200 {
-      max-width: 422px;
-      margin-bottom: 36px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    @include Screen-992 {
-      margin-right: 0;
-      margin-bottom: 24px;
-    }
-    @include Screen-576 {
-      padding: 24px 16px;
-      height: 586px;
-      &:first-child {
-        height: 502px;
-      }
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-    &__nav {
+  &-text {
+    margin-bottom: 56px;
+    &__wrap { // title + spot left
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
     }
-    &__spot {
-      color: #FD6666;
+  }
+  &-title {
+    margin-bottom: 32px;
+    @include Screen-768 {
+      margin-bottom: 20px;
+    }
+  }
+  &-spot {
+    color: #ACFF79;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.08px;
+    display: flex;
+    align-items: center;
+    @include Screen-576 {
+      display: none;
+    }
+    svg {
+      margin-right: 6px;
+    }
+  }
+  &-descr {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 146.5%;
+    letter-spacing: -0.1px;
+    max-width: 414px;
+    @include Screen-768 {
       font-size: 16px;
-      font-weight: 500;
-      line-height: normal;
-      letter-spacing: -0.08px;
-      svg {
-        margin-right: 6px;
-      }
-      @include Screen-576 {
-        font-size: 14px;
-        svg {
-          display: none;
-        }
+      max-width: 364px;
+    }
+  }
+
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 57px;
+    @include Screen-768 {
+      flex-direction: column;
+    }
+    @include Screen-768 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-card {
+    // linear-gradient(90deg, #FFFFFF 0%, #FFFFFF40 50.62%, #FFFFFF87 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.151);
+    background: #111113;
+    padding: 36px 32px 26px;
+    width: 100%;
+    max-width: 424px;
+    @include Screen-768 {
+      max-width: 360px;
+      padding: 19px 16px 20px;
+      box-sizing: border-box;
+    }
+    &:last-child {
+      margin-left: 20px;
+      @include Screen-768 {
+        margin-left: 0;
+        margin-top: 24px;
       }
     }
-    &__name {
-      font-size: 20px;
-      font-weight: 500;
+    &__descr {
+      color: #FFF;
+      font-size: 18px;
       line-height: normal;
-      letter-spacing: -0.1px;
-      @include Screen-1200 {
-        font-size: 19px;
-      }
-      @include Screen-576 {
-        font-size: 14px;
+      letter-spacing: -0.27px;
+      margin-bottom: 12px;
+      @include Screen-768 {
+        font-size: 16px;
+        margin-bottom: 8px;
       }
     }
     &__price {
@@ -109,49 +94,57 @@
       font-size: 52px;
       font-weight: 500;
       line-height: normal;
-      letter-spacing: -0.78px;
-      @include Screen-576 {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+      @include Screen-768 {
         font-size: 42px;
+        margin-bottom: 16px;
+      }
+      &-old {
+        margin-left: 6px;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: line-through;
+        @include Screen-768 {
+          font-size: 20px;
+        }
       }
     }
-    &__descr {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 146.5%;
-      letter-spacing: -0.27px;
-      @include Screen-576 {
-        font-size: 16px;
+
+    &__list { // main list
+      margin-bottom: 84px;
+      @include Screen-768 {
+        margin-bottom: 36px;
       }
-    }
-    &__hr {
-      height: 1px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      margin: 20px 0; 
-    }
-    &-list {
-      &__item {
+      &-item { // main item + popup items
+        color: rgba(255, 255, 255, 0.8);
         font-size: 18px;
         font-weight: 500;
         line-height: normal;
         letter-spacing: -0.27px;
         margin-bottom: 18px;
-        margin-left: 17px;
-        padding-left: 9px;
+        padding-left: 17px;
         position: relative;
-        @include Screen-576 {
-          font-size: 16px;
+        display: flex;
+        align-items: center;
+        @include Screen-992 {
+          font-size: 15px;
+        }
+        @include Screen-768 {
+          margin-bottom: 14px;
         }
         &::before {
           content: '';
+          position: absolute;
+          left: 0;
+          top: 8.5px;
           width: 8px;
           height: 8px;
           border-radius: 100%;
           background-color: #FFF;
-          position: absolute;
-          left: -8px;
-          top: 50%;
-          transform: translateY(-50%);
         }
         &:last-child {
           margin-bottom: 0;
@@ -159,307 +152,96 @@
       }
     }
 
+    &__more { // wrap "i" svg and more-block
+      display: block;
+      position: relative;
+      svg {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      &-block {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 12px;
+        background: #111113;
+        width: 247px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.151);
+        z-index: 4;
+        @include Screen-768 {
+          width: 187px;
+          left: auto;
+          right: 0;
+        }
+        &--2 {
+          width: 222px;
+          @include Screen-768 {
+            width: 170px;
+          }
+        }
+      }
+      &-list {
+
+      }
+      &-item {
+
+      }
+      &:hover {
+        .pricing-card__more-block {
+          display: block;
+        }
+      }
+    }
+
     &__buttons {
       text-align: center;
     }
-
     &__btn {
-      color: #FFF;
-      font-size: 20px;
-      line-height: 30px; /* 150% */
-      letter-spacing: -0.2px;
-      border-radius: 12px;
-      border: 1px solid #5A5A5A;
-      background: #242424;
-      transition: .2s all;
-      cursor: pointer;
-      height: 64px;
+      margin-bottom: 24px;
       width: 100%;
-      margin-bottom: 20px;
-      @include Screen-576 {
-        margin-bottom: 16px;
-      }
-      &:hover {
-        background: #FFF;
-        color: #111;
-      }
-      &--active {
-        background: #FFF;
-        color: #111;
+      @include Screen-768 {
+        font-size: 16px;
+        height: 50px;
+        margin-bottom: 20px;
       }
     }
-
-    &__call {
+    &__chat {
       color: #FFF;
       text-align: center;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 30px; /* 150% */
-      letter-spacing: -0.2px;
+      font-size: 16px;
+      line-height: 30px; /* 187.5% */
+      letter-spacing: -0.16px;
       transition: .3s all;
       &:hover {
-        color: rgba(255, 255, 255, 0.789);
+        color: rgba(255, 255, 255, 0.698);
       }
     }
   }
 
-
-
-  &-info { // карточка внизу прайсу
-    border-radius: 8px;
-    background: #242424;
-    padding: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 886px;
-    width: 100%;
-    @include Screen-992 {
-      max-width: 716px;
-    }
-    @include Screen-768 {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    @include Screen-576 {
-      padding: 20px 16px;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    &-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 136px;
-    }
-    &__block {
-      display: flex;
-      align-items: center;
-      @include Screen-768 {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-    &__image {
-      margin-right: 32px;
-      @include Screen-768 {
-        margin-bottom: 32px;
-        margin-right: 0;
-      }
-    }
-    &__text {
-
-    }
-    &__title {
-      color: #FFF;
-      font-size: 18px;
-      line-height: normal;
-      letter-spacing: -0.18px;
-      margin-bottom: 12px;
-      @include Screen-576 {
-        font-size: 16px;
-      }
-    }
-    &__descr {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: -0.18px;
-      max-width: 555px;
-      @include Screen-992 {
-        max-width: 405px;
-      }
-      @include Screen-768 {
-        margin-bottom: 20px;
-        max-width: 520px;
-      }
-      @include Screen-576 {
-        font-size: 16px;
-      }
-    }
-    &__btn {
-      color: #FFF;
-      font-size: 20px;
-      line-height: 30px; /* 150% */
-      letter-spacing: -0.2px;
-      &:hover {
-        color: #FFF;
-      }
-    }
-  }
-
-
-  &-feedback { // карточки внизу прокручуються
-    display: flex;
-    overflow: hidden;
+  &-lines {
     position: relative;
-    width: 20000px;
-    &::after {
-      content: '';
-      height: 179px;
-      width: 100%;
+    padding: 65px 0;
+    display: flex;
+    justify-content: center;
+    &__1, &__2 {
+      display: block;
+      opacity: 0.3;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+    }
+    &__1 {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, #111 100%);
-      z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      height: 130px;
+      width: 1px;
     }
-    @include Screen-768 {
-      padding: 0 15px;
-      &::after {
-        height: 149px;
-      }
+    &__2 {
+      height: 1px;
+      max-width: 868px;
+      width: 100%;
     }
-    &-card {  
-      border-radius: 8px;
-      background: #242424;
-      width: 525px;
-      height: 340px;
-      padding: 30px 24px;
-      margin-right: 32px;
-      animation: slide 60s linear infinite;
-      @include Screen-768 {
-        padding: 28px 20px;
-        width: 282px;
-        height: 343px;
-        margin-right: 10px;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      &__main {
-        display: flex;
-        justify-content: space-between;
-        padding: 46px 24px;
-        @include Screen-768 {
-          padding: 24px 20px;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-        &__block {
-          @include Screen-768 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 66px;
-          }
-        }
-        &__logo {
-          img {
-            max-width: 152px;
-            margin-bottom: 15px;
-            @include Screen-768 {
-              max-width: 97px;
-              margin-bottom: 0;
-            }
-          }
-        }
-        &__descr {
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 20px;
-          font-weight: 500;
-          line-height: normal;
-          letter-spacing: -0.6px;
-          @include Screen-768 {
-            font-size: 14px;
-          }
-        }
-        &__link {
-          color: #FFF;
-          font-size: 20px;
-          font-weight: 500;
-          line-height: normal;
-          letter-spacing: -0.6px;
-          &:hover {
-            color: #FFF;
-          }
-          svg {
-            margin-left: 16px;
-          }
-          @include Screen-768 {
-            font-size: 16px;
-            svg {
-              margin-left: 8px;
-              width: 20px;
-            }
-          }
-        }
-      }
-
-      &__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 32px;
-        @include Screen-768 {
-          margin-bottom: 27px;
-        }
-      }
-      &__logo {
-        img {
-          max-width: 62px;
-        }
-      }
-      &__link {
-        svg {
-
-        }
-      }
-
-      &__descr {
-        color: #FFF;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        margin-bottom: 32px;
-        max-width: 436px;
-        @include Screen-768 {
-          font-size: 16px;
-          margin-bottom: 33px;
-          height: 66px;
-        }
-      }
-      &__user {
-        display: flex;
-      }
-      &__image {
-        margin-right: 16px;
-        @include Screen-768 {
-          margin-right: 12px;
-        }
-        img {
-          max-width: 50px;
-        }
-      }
-      &__name {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 20px;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        @include Screen-768 {
-          font-size: 16px;
-        }
-        span {
-          display: block;
-          font-weight: 500;
-        }
-      }
-      &:nth-child(2) {
-        .pricing-feedback-card__descr {
-          max-width: 387px;
-        }
-      }
-    }
-
-  }
-}
-
-@keyframes slide {
-  0% {
-      transform: translate3d(0, 0, 0);
-  }
-  100% {
-      transform: translate3d(-1500px, 0, 0); /* The image width */
   }
 }

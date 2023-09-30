@@ -1,147 +1,105 @@
-
-
 .facts {
-  background: #EBEEF9;
-  padding: 120px 0;
-  margin-bottom: 92px;
+  margin-bottom: 433px;
+  position: relative;
   @include Screen-992 {
-    overflow: hidden;
+    margin-bottom: 170px;
   }
-  @include Screen-576 {
-    padding: 32px 0;
-    margin-bottom: 44px;
+  @include Screen-768 {
+    margin-bottom: 112px;
   }
-  &-wrap {
-    display: flex;
-    justify-content: space-between;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -112px;
+    width: 1px;
+    height: 829px;
+    opacity: 0.3;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
     @include Screen-992 {
       display: none;
     }
   }
-  &--mobile {
-    display: none;
-    @include Screen-992 {
-      display: block;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 84px 0 79px 0;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      opacity: 0.3;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+      height: 1px;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1088px;
     }
-  }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
 
-  &-card {
-    border-radius: 24px;
-    background: #FFF;
-    padding: 29px 24px 32px;
-    max-width: 424px;
-    max-height: 443px;
-    min-height: 100%;
-    width: 100%;
-    margin-right: 20px;
-    will-change: transform;
-    &:nth-child(2) {
-      animation: scrollFirstFact linear both;
-      animation-timeline: view(block);
-      animation-range: contain 10 contain 70;    
-    }
-    &:nth-child(3) {
-      animation: scrollSecondFact linear both;
-      animation-timeline: view(block);
-      animation-range: contain 10 contain 70;    
-    }
     @include Screen-992 {
-      height: 353px;
-    }
-    @include Screen-576 {
-      width: 256px;
-      height: 250px;
-      padding: 16px 30px 24px 16px;
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      padding: 44px 0 44px 0;
     }
-    &__number {
-      color:  #111;
-      font-size: 64px;
-      line-height: 135%; 
-      letter-spacing: -0.32px;
-      margin-bottom: 154px;
-      font-weight: 500;
-      @include Screen-1200 {
-        margin-bottom: 114px;
-      }
-      @include Screen-992 {
-        font-size: 48px;
-        margin-bottom: 84px;
-      }
-      @include Screen-576 {
-        font-size: 32px;
-        margin-bottom: 0px;
-      }
+    @include Screen-768 {
+      align-items: flex-start;
     }
+  }
 
-    &__text {
-      
-    }
-    &__title {
-      color:  #111;
-      font-size: 22px;
-      line-height: 135%; /* 29.7px */
-      letter-spacing: -0.11px;
-      margin-bottom: 12px;
-      @include Screen-992 {
-        font-size: 18px;
-      }
-      @include Screen-576 {
-        font-size: 16px;
-      }
-    }
-    &__descr {
-      color: #484848;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 135%; /* 24.3px */
-      letter-spacing: -0.09px;
-      max-width: 302px;
-      text-wrap: pretty;
-      @include Screen-992 {
-        font-size: 16px;
-      }
-      @include Screen-576 {
-        font-size: 14px;
-        max-width: 310px;
-      }
-
-    }
-    &:nth-child(2) {
-      // .facts-card__descr {
-      //   max-width: 210px;
-      // }
-      
-    }
-    &:nth-child(3) {
-      .facts-card__descr {
-        max-width: 332px;
+  &-left {
+    @include Screen-992 {
+      padding-bottom: 44px;
+      margin-bottom: 44px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        opacity: 0.3;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50.62%, rgba(255, 255, 255, 0.00) 100%);
+        height: 1px;
+        width: 88vw;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1088px;
+        bottom: 0;
       }
     }
   }
-}
+  &-right {
 
-
-@keyframes scrollFirstFact {
-  from {
-    transform: translateY(0);
+  }
+  &-left, &-right {
+    
   }
 
-  to {
-    transform: translateY(50px);
+  &-title {
+    color: #FFF;
+    font-size: 30px;
+    line-height: 114%; /* 34.2px */
+    letter-spacing: -0.9px;
+    margin-bottom: 27px;
+    @include Screen-768 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
-}
-
-
-@keyframes scrollSecondFact {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(100px);
-
+  &-descr {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 146.5%; /* 29.3px */
+    letter-spacing: -0.1px;
+    max-width: 358px;
+    @include Screen-768 {
+      font-size: 16px;
+    }
   }
 }
