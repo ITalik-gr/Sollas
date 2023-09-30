@@ -201,7 +201,7 @@
     display: flex;
     align-items: center;
     width: 270vw;
-    transform: translateX(-14%);
+    transform: translateX(-5%);
     animation: card-scroll 120s infinite linear;
     &-card {
       margin-right: 23px;
@@ -290,7 +290,7 @@
 
 @keyframes card-scroll {
   0% {
-    transform: translateX(-14%);
+    transform: translateX(-5%);
   }
   100% {
     transform: translateX(-100%);

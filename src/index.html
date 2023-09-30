@@ -38,12 +38,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-    <!-- <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-        /> -->
+
+    <link rel="preload" href="css/base.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="css/style.min.css">
-    
 
 </head>
 
@@ -105,23 +102,23 @@
             </div>
         </nav>
         <div class="header-line header-line__1">
-            <img src="img/header-left.png" alt="">
+            <img  decoding="async" loading="lazy"src="img/header-left.webp" alt="">
         </div>
         <div class="header-line header-line__2">
-            <img src="img/header-right.png" alt="">
+            <img decoding="async" loading="lazy" src="img/header-right.webp" alt="">
         </div>
         <div class="header-star header-star__1 star">
-            <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-            <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+            <img decoding="async" loading="lazy" class="star-item star-item-v" src="img/start-w.webp" alt="Star V">
+            <img decoding="async" loading="lazy" class="star-item star-item-h" src="img/star-hor.webp" alt="Star H">
         </div>
         <div class="header-star header-star__2 star">
-            <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-            <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+            <img decoding="async" loading="lazy" class="star-item star-item-v" src="img/start-w.webp" alt="Star V">
+            <img decoding="async" loading="lazy" class="star-item star-item-h" src="img/star-hor.webp" alt="Star H">
         </div>
         <div class="container-2">
             <div class="header-wrap">
                 <a target="_blank" href="https://clutch.co/profile/sollas?_gl=1*1ihjgfh*_ga*MTEzNTI4NzU0Ny4xNjg5Njc5ODM2*_ga_D0WFGX8X3V*MTY5MjgyMzA1MS4yOS4xLjE2OTI4MjMyOTIuMzguMC4w*_fplc*akhNbWxsOElOVzgxam5BS1drVVdNZ3R1bktJTzlwb0RqYVZubEE2UiUyRkNFa1JBT0RHZG9XcElkSXU2SGFmWWkxSkhzMG9hRyUyQkFpRGtXVjdRRCUyRmtkcHRCdkxKa1ZCJTJCRnhxM3RpWGloSXV2ZmlmbGs2TG8lMkJzQzJJMnQ1aTZZQSUzRCUzRA" class="header-clutch">
-                    <img src="img/clutch-logo.png" alt="Clutch" class="header-clutch__image">
+                    <img decoding="async" loading="lazy" src="img/clutch-logo.webp" alt="Clutch" class="header-clutch__image">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0577 7.67293C18.1849 7.77204 18.2806 7.90592 18.3332 8.05835C18.3738 8.21074 18.3702 8.37151 18.323 8.52197C18.2758 8.67243 18.1869 8.80641 18.0666 8.90835L14.6249 12.2417L15.4582 16.975C15.488 17.1312 15.4724 17.2927 15.4133 17.4404C15.3543 17.5881 15.2542 17.7157 15.1249 17.8083C14.9819 17.9119 14.8098 17.9673 14.6332 17.9667C14.4989 17.9671 14.3669 17.9327 14.2499 17.8667L9.9999 15.6417L5.7499 17.8667C5.61012 17.9457 5.45047 17.9827 5.29017 17.9731C5.12988 17.9636 4.97575 17.9079 4.84634 17.8128C4.71693 17.7178 4.61775 17.5873 4.56072 17.4372C4.50369 17.2871 4.49126 17.1237 4.5249 16.9667L5.35823 12.2333L1.91657 8.90001C1.80945 8.79312 1.73346 8.65907 1.69676 8.51226C1.66005 8.36545 1.66402 8.21141 1.70823 8.06668C1.75653 7.91858 1.84538 7.78698 1.96469 7.68681C2.084 7.58665 2.229 7.52194 2.38323 7.50001L7.1249 6.80001L9.2499 2.50001C9.31814 2.35912 9.42468 2.2403 9.55732 2.15716C9.68997 2.07402 9.84335 2.02992 9.9999 2.02992C10.1564 2.02992 10.3098 2.07402 10.4425 2.15716C10.5751 2.2403 10.6817 2.35912 10.7499 2.50001L12.8749 6.80835L17.6166 7.50001C17.7772 7.51376 17.9305 7.57383 18.0577 7.67293Z" fill="#C9E06B"/>
                     </svg>
@@ -143,41 +140,41 @@
             </div>
             <div class="header-scroll">
                 <div class="header-scroll-card header-scroll-card-1">
-                    <img style="width: 340px;" src="img/scroll-work-1.png" alt="Our work" class="header-scroll-card__image">
+                    <img style="width: 340px;" height="401px" src="img/scroll-work-1.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-2">
-                    <img style="width: 447px;" src="img/scroll-work-2.png" alt="Our work" class="header-scroll-card__image">
+                    <img height="401px" style="width: 447px;" src="img/scroll-work-2.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-3">
-                    <img style="width: 340px;" src="img/scroll-work-3.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-3.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-4">
-                    <img style="width: 447px;" src="img/scroll-work-4.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 447px;" src="img/scroll-work-4.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-5">
-                    <img style="width: 340px;" src="img/scroll-work-5.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-5.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-6">
-                    <img style="width: 447px;" src="img/scroll-work-6.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 447px;" src="img/scroll-work-6.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <!-- Part 2 -->
                 <div class="header-scroll-card header-scroll-card-1">
-                    <img style="width: 340px;" src="img/scroll-work-1.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-1.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-2">
-                    <img style="width: 447px;" src="img/scroll-work-2.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 447px;" src="img/scroll-work-2.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-3">
-                    <img style="width: 340px;" src="img/scroll-work-3.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-3.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-4">
-                    <img style="width: 447px;" src="img/scroll-work-4.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 447px;" src="img/scroll-work-4.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-5">
-                    <img style="width: 340px;" src="img/scroll-work-5.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-5.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-6">
-                    <img style="width: 447px;" src="img/scroll-work-6.png" alt="Our work" class="header-scroll-card__image">
+                    <img decoding="async" loading="lazy" height="401px" style="width: 447px;" src="img/scroll-work-6.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
             </div>
         </div>  
@@ -289,16 +286,16 @@
                 </div>
                 <div class="how-line">
                     <div class="how-line__star how-line__star_1 star">
-                        <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-                        <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+                        <img decoding="async" loading="lazy" class="star-item star-item-v" src="img/start-w.webp" alt="Star V">
+                        <img decoding="async" loading="lazy" class="star-item star-item-h" src="img/star-hor.webp" alt="Star H">
                     </div>
                     <div class="how-line__star how-line__star_2 star">
-                        <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-                        <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+                        <img decoding="async" loading="lazy" class="star-item star-item-v" src="img/start-w.webp" alt="Star V">
+                        <img decoding="async" loading="lazy" class="star-item star-item-h" src="img/star-hor.webp" alt="Star H">
                     </div>
                     <div class="how-line__star how-line__star_3 star">
-                        <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-                        <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+                        <img decoding="async" loading="lazy" class="star-item star-item-v" src="img/start-w.webp" alt="Star V">
+                        <img decoding="async" loading="lazy" class="star-item star-item-h" src="img/star-hor.webp" alt="Star H">
                     </div>
     
                 </div>
@@ -338,7 +335,7 @@
                 </p>
                 <div class="feedback-user">
                     <div class="feedback-user__image">
-                        <img src="img/feedback-user.webp" alt="Jason Curry">
+                        <img src="img/feedback-user.webp" decoding="async" loading="lazy" alt="Jason Curry">
                     </div>
                     <div class="feedback-user__text">
                         <div class="feedback-user__name">
@@ -486,8 +483,8 @@
             <div class="extra-text">
                 <h3 class="block-title extra-title">Add-ons</h3>
                 <div class="extra-star star">
-                    <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-                    <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+                    <img class="star-item star-item-v" src="img/start-w.webp" decoding="async" loading="lazy" alt="Star V">
+                    <img class="star-item star-item-h" src="img/star-hor.webp" decoding="async" loading="lazy" alt="Star H">
                 </div>
             </div>
 
@@ -671,7 +668,7 @@
                         </div>
                     </div>
                     <div class="works-card__image">
-                        <img src="img/work-1.png" alt="Continuum - Mobile app MVP in 14 days">
+                        <img src="img/work-1.webp" decoding="async" loading="lazy" alt="Continuum - Mobile app MVP in 14 days">
                     </div>
                 </a>
 
@@ -685,7 +682,7 @@
                         </div>
                     </div>
                     <div class="works-card__image">
-                        <img src="img/work-2.png" alt="Answerly - Web App in 7 days">
+                        <img src="img/work-2.webp" decoding="async" loading="lazy" alt="Answerly - Web App in 7 days">
                     </div>
                 </a>
 
@@ -699,7 +696,7 @@
                         </div>
                     </div>
                     <div class="works-card__image">
-                        <img src="img/work-3.png" alt="Comigo - Mobile and Web app in 14 days">
+                        <img src="img/work-3.webp" decoding="async" loading="lazy" alt="Comigo - Mobile and Web app in 14 days">
                     </div>
                 </a>
 
@@ -713,7 +710,7 @@
                         </div>
                     </div>
                     <div class="works-card__image">
-                        <img src="img/work-4.png" alt="Ooma - Mobile app in 7 days">
+                        <img src="img/work-4.webp" decoding="async" loading="lazy" alt="Ooma - Mobile app in 7 days">
                     </div>
                 </a>
             </div>
@@ -731,7 +728,7 @@
                                 </div>
                             </div>
                             <div class="works-card__image">
-                                <img src="img/work-1.png" alt="Continuum - Mobile app MVP in 14 days">
+                                <img src="img/work-1.webp" decoding="async" loading="lazy" alt="Continuum - Mobile app MVP in 14 days">
                             </div>
                         </a>
                     </div>
@@ -747,7 +744,7 @@
                                 </div>
                             </div>
                             <div class="works-card__image">
-                                <img src="img/work-2.png" alt="Answerly - Web App in 7 days">
+                                <img src="img/work-2.webp" decoding="async" loading="lazy" alt="Answerly - Web App in 7 days">
                             </div>
                         </a>
                     </div>
@@ -763,7 +760,7 @@
                                 </div>
                             </div>
                             <div class="works-card__image">
-                                <img src="img/work-3.png" alt="Comigo - Mobile and Web app in 14 days">
+                                <img src="img/work-3.webp" decoding="async" loading="lazy" alt="Comigo - Mobile and Web app in 14 days">
                             </div>
                         </a>
                     </div>
@@ -779,7 +776,7 @@
                                 </div>
                             </div>
                             <div class="works-card__image">
-                                <img src="img/work-4.png" alt="Ooma - Mobile app in 7 days">
+                                <img src="img/work-4.webp" decoding="async" loading="lazy" alt="Ooma - Mobile app in 7 days">
                             </div>
                         </a>
                     </div>
@@ -913,14 +910,14 @@
 
     <section class="contact-us contact-us--main">
         <div class="contact-us-line contact-us-line__1">
-            <img src="img/header-left.png" alt="">
+            <img src="img/header-left.webp" decoding="async" loading="lazy" alt="">
         </div>
         <div class="contact-us-line contact-us-line__2">
-            <img src="img/header-right.png" alt="">
+            <img src="img/header-right.webp" decoding="async" loading="lazy" alt="">
         </div>
         <div class="contact-us-star star">
-            <img class="star-item star-item-v" src="img/start-w.png" alt="Star V">
-            <img class="star-item star-item-h" src="img/star-hor.png" alt="Star H">
+            <img class="star-item star-item-v" decoding="async" loading="lazy" src="img/start-w.webp" alt="Star V">
+            <img class="star-item star-item-h" decoding="async" loading="lazy" src="img/star-hor.webp" alt="Star H">
         </div>
         <div class="container">
             <div class="contact-us-wrap">
@@ -953,13 +950,13 @@
                     <!-- <input placeholder="Enter Your email" type="email" class="newsletter-input">
 
                     <button type="submit" class="newsletter-btn">Subscribe</button> -->
-                    <iframe src="https://embeds.beehiiv.com/3ab4c1c4-4964-4f3e-92bf-34810d50ed42?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+                    <iframe loading="lazy" title="Beehiiv" src="https://embeds.beehiiv.com/3ab4c1c4-4964-4f3e-92bf-34810d50ed42?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
 
                 </form>
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer footer-main">
         <div class="container-2">
             <div class="footer-wrap">
                 <div class="footer-left">
@@ -1026,8 +1023,8 @@
 
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
-    <script src="js/swiper.js"></script>
-    <script src="js/script.js"></script>
+    <script defer src="js/swiper.js"></script>
+    <script defer src="js/script.js"></script>
 
 </body>
 </html>

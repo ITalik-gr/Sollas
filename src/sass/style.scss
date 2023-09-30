@@ -226,10 +226,10 @@ p {
 }
 
 
-@import 'blocks/header';
+// @import 'blocks/header';
 @import 'blocks/faq';
-@import 'blocks/contact-us';
-@import 'blocks/footer';
+// @import 'blocks/contact-us';
+// @import 'blocks/footer';
 @import 'blocks/how';
 @import 'blocks/facts';
 @import 'blocks/feedback';
@@ -239,7 +239,8 @@ p {
 @import 'blocks/newsletter';
 
 
-@import 'blocks/case';
+// @import 'blocks/case';
+
 @import 'blocks/career';
 @import 'blocks/privacy';
 @import 'blocks/ideas';

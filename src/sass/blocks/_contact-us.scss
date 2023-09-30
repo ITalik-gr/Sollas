@@ -1,6 +1,7 @@
 .contact-us {
-  padding: 164px 0 0 0;
+  padding: 164px 0 163px 0;
   position: relative;
+  background: #111;
   @include Screen-768 {
     padding: 74px 0 0 0;
   }
@@ -87,11 +88,17 @@
   }
 
   &--main {
-    .contact-us {
       margin-bottom: 183px;
+      background-color: transparent!important;
+      padding: 164px 0 0px 0!important;
+      @include Screen-768 {
+        padding: 74px 0 0 0;
+      }
+      @include Screen-576 {
+        padding: 38px 0 51px 0;
+      }
       @include Screen-576 {
         margin-bottom: 46px;
       }
     }
-  }
 }
