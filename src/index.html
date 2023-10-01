@@ -40,6 +40,8 @@
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
     <link rel="preload" href="css/base.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" as="image" href="img/scroll-work-2.webp" />
+    <link rel="preload" as="image" href="img/scroll-work-1.webp" />
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -140,10 +142,10 @@
             </div>
             <div class="header-scroll">
                 <div class="header-scroll-card header-scroll-card-1">
-                    <img style="width: 340px;" height="401px" src="img/scroll-work-1.webp" alt="Our work" class="header-scroll-card__image">
+                    <img fetchPriority="high" width="340px" height="401px" src="img/scroll-work-1.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-2">
-                    <img height="401px" style="width: 447px;" src="img/scroll-work-2.webp" alt="Our work" class="header-scroll-card__image">
+                    <img fetchPriority="high" height="401px" width="447px" src="img/scroll-work-2.webp" alt="Our work" class="header-scroll-card__image">
                 </div>
                 <div class="header-scroll-card header-scroll-card-3">
                     <img decoding="async" loading="lazy" height="401px" style="width: 340px;" src="img/scroll-work-3.webp" alt="Our work" class="header-scroll-card__image">
@@ -947,15 +949,18 @@
                     </p>
                 </div>
                 <form action="" class="newsletter-form">
-                    <!-- <input placeholder="Enter Your email" type="email" class="newsletter-input">
+                    <div class="newsletter-input__wrap">
+                        <input placeholder="Enter Your email" type="email" class="newsletter-input">
+                        <span class="newsletter-input-error">Enter valid email</span>
+                    </div>
+                    
 
-                    <button type="submit" class="newsletter-btn">Subscribe</button> -->
-                    <iframe loading="lazy" title="Beehiiv" src="https://embeds.beehiiv.com/3ab4c1c4-4964-4f3e-92bf-34810d50ed42?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
-
+                    <a class="newsletter-btn">Subscribe</a> 
                 </form>
             </div>
         </div>
     </div>
+
     <footer class="footer footer-main">
         <div class="container-2">
             <div class="footer-wrap">
@@ -1022,9 +1027,12 @@
 
 
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+  
+
     <script defer src="js/swiper.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="js/subscribe-form.js"></script>
 
 </body>
 </html>
