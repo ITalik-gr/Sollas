@@ -1,3 +1,4 @@
+
 let accordionNav = document.querySelectorAll('.faq-accordion-nav'),
     accordionBody = document.querySelectorAll('.faq-accordion-body'),
     accordionImage = document.querySelectorAll('.faq-accordion-image svg path');
@@ -126,7 +127,6 @@ for (let anchor of anchors) {
     })
   })
 }
-
 
 
 

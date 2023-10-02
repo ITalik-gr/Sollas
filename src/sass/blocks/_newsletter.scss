@@ -2,6 +2,7 @@
   padding: 64px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #080809;
   @include Screen-576 {
     padding: 72px 0;
   }
@@ -44,7 +45,7 @@
       width: 100%;
     }
   }
-  &-input, .sc-gZMcBi {
+  &-input {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid rgba(54, 54, 54, 0.74);
@@ -54,14 +55,28 @@
     font-weight: 500;
     line-height: 30px; /* 187.5% */
     letter-spacing: -0.16px;
-    margin-right: 16px;
     max-width: 297px;
     width: 100%;
     height: 52px;
     box-sizing: border-box;
-    @include Screen-992 {
-      margin-bottom: 24px;
-      margin-right: 0;
+    &-error {
+      margin-top: 4px;
+      display: none;
+      color: #FF7979;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.12px;
+      &--active {
+        display: block;
+      }
+    }
+    &__wrap {
+      margin-right: 16px;
+      @include Screen-992 {
+        margin-bottom: 24px;
+        margin-right: 0;
+      }
     }
   }
   &-btn {
@@ -84,22 +99,10 @@
       width: 100%;
     }
   }
-
-}
-
-.doCfh {
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(54, 54, 54, 0.74);
-  background: #080809;
-  color: #ffffffb3;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px; /* 187.5% */
-  letter-spacing: -0.16px;
-  margin-right: 16px;
-  max-width: 297px;
-  width: 100%;
-  height: 52px;
-  box-sizing: border-box;
+  &-succsess {
+    border: 1px solid #ACFF79;
+  }
+  &-error {
+    border: 1px solid #FF7979;
+  }
 }
