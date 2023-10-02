@@ -19,7 +19,7 @@ function isValidEmail(email) {
 
 // Функція для підписки користувача за поштою
 async function subscribeByEmail(userEmail) {
-  let response = await axios.post('https://sollas-server.onrender.com/subscribe', {
+  let response = await axios.post('https://lazy-yoke-wasp.cyclic.cloud/subscribe', {
     "email": userEmail
   })
   if(response.data) {
